@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Siddhivinayak Car Care | Premium Multibrand Automotive Workshop — Chikhali, Pune</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Siddhivinayak Car Care — Pune's premium multibrand automotive engineering lab in Chikhali, PCMC. Expert diagnostics, denting & painting, AC service, ceramic coating & more." />
+    <meta name="keywords" content="car repair Pune, garage Chikhali, car service Talawade, denting painting PCMC, multibrand workshop Pune, ceramic coating Pune" />
+    <meta name="author" content="Siddhivinayak Car Care" />
+    <meta property="og:title" content="Siddhivinayak Car Care | Premium Automotive Workshop" />
+    <meta property="og:description" content="Dealership-quality diagnostics without dealership markups. Serving Chikhali, Talawade, Moshi, PCMC." />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet" />
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "background":   "#FFFFFF",
+                        "surface":      "#F8FAFC",
+                        "surface-light":"#F1F5F9",
+                        "primary":      "#E63946",
+                        "secondary":    "#2563EB",
+                        "on-surface":   "#334155",
+                        "muted":        "#64748B",
+                        "outline":      "#E2E8F0"
+                    },
+                    fontFamily: {
+                        "headline": ["PT Serif", "serif"],
+                        "body":     ["Roboto Slab", "serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-background text-on-surface font-body overflow-x-hidden">
+
+    <!-- ═══════════════════════════════════════════════════
+         HEADER & NAVIGATION
+    ════════════════════════════════════════════════════ -->
+    <header id="main-header" class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-outline transition-all duration-500 py-3">
+        <nav class="flex justify-between items-center px-4 md:px-6 max-w-7xl mx-auto">
+            <a href="#hero" class="text-base sm:text-2xl md:text-4xl lg:text-5xl font-headline font-black tracking-tight text-slate-900 uppercase hover:text-primary transition-colors whitespace-nowrap">
+                Siddhivinayaka <span class="text-primary font-light italic">Car Care</span>
+            </a>
+            
+            <div class="flex items-center gap-2 md:gap-4">
+                <!-- Mobile Quick Call Button -->
+                <a href="tel:+919970745411" class="md:hidden flex w-9 h-9 items-center justify-center bg-primary text-white rounded-full transition-transform active:scale-90 hover:scale-105 shadow-md shadow-primary/25">
+                    <span class="material-symbols-outlined text-lg">phone</span>
+                </a>
+                <!-- Desktop Direct Call -->
+                <a href="tel:+919970745411" class="hidden md:flex items-center gap-3 text-slate-900 hover:text-primary transition-colors text-lg md:text-2xl font-headline tracking-wider font-bold">
+                    <span class="material-symbols-outlined text-xl text-primary animate-pulse">phone</span>+91 99707 45411
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ═══════════════════════════════════════════════════
+             1. HERO — SINGLE CINEMATIC IMAGE + HERO TEXT
+        ════════════════════════════════════════════════════ -->
+        <section id="hero" class="relative pt-24 md:pt-28 pb-10 bg-background">
+            <div class="max-w-7xl mx-auto px-6">
+                <!-- Garage Image Container -->
+                <div class="relative w-full rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-outline shadow-2xl" style="height: clamp(240px, 48vw, 560px);">
+                    <!-- Slides wrapper -->
+                    <div id="heroSlides" class="flex w-full h-full transition-transform duration-700 ease-in-out">
+                        <!-- Slide 1 -->
+                        <div class="w-full h-full shrink-0 relative">
+                            <img src="Assests/Hero bg (1).jpeg"
+                                 alt="Siddhivinayaka Car Care Premium Garage Chikhali"
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/45"></div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="w-full h-full shrink-0 relative">
+                            <img src="Assests/Hero bg (2).jpeg"
+                                 alt="Siddhivinayaka Car Care Premium Diagnostics"
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/45"></div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="w-full h-full shrink-0 relative">
+                            <img src="Assests/Hero bg (3).jpeg"
+                                 alt="Siddhivinayaka Car Care Premium Workshop PCMC"
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/45"></div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="w-full h-full shrink-0 relative">
+                            <img src="Assests/Hero bg (1).jfif"
+                                 alt="Siddhivinayaka Car Care Premium Services Lounge"
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/45"></div>
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="w-full h-full shrink-0 relative">
+                            <img src="Assests/Hero bg (2).jfif"
+                                 alt="Siddhivinayaka Car Care Clinical Diagnostics Lab"
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/45"></div>
+                        </div>
+                        <!-- Slide 6 -->
+                        <div class="w-full h-full shrink-0 relative">
+                            <img src="Assests/Hero bg (3).jfif"
+                                 alt="Siddhivinayaka Car Care Motorsport Workshop"
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/45"></div>
+                        </div>
+                    </div>
+
+                    <!-- Open status badge -->
+                    <div class="absolute top-5 left-5 z-25 flex items-center gap-2 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
+                        <span class="w-2 h-2 rounded-full bg-green-400 animate-ping absolute"></span>
+                        <span class="w-2 h-2 rounded-full bg-green-400"></span>
+                        <span class="text-white text-[10px] font-headline font-semibold uppercase tracking-wider ml-1">Open Now · Mon–Sun 9AM–8PM</span>
+                    </div>
+
+                    <!-- Slider Controls (Chevron buttons) -->
+                    <button id="sliderPrev" class="absolute left-4 top-1/2 -translate-y-1/2 z-25 w-10 h-10 rounded-full bg-black/40 hover:bg-black/60 border border-white/10 flex items-center justify-center text-white transition-all active:scale-90 hover:scale-105">
+                        <span class="material-symbols-outlined text-lg">chevron_left</span>
+                    </button>
+                    <button id="sliderNext" class="absolute right-4 top-1/2 -translate-y-1/2 z-25 w-10 h-10 rounded-full bg-black/40 hover:bg-black/60 border border-white/10 flex items-center justify-center text-white transition-all active:scale-90 hover:scale-105">
+                        <span class="material-symbols-outlined text-lg">chevron_right</span>
+                    </button>
+
+                    <!-- Slider Dots -->
+                    <div class="absolute bottom-5 left-1/2 -translate-x-1/2 z-25 flex gap-2">
+                        <button class="slider-dot w-5 h-2 rounded-full bg-white transition-all duration-300" data-index="0"></button>
+                        <button class="slider-dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300" data-index="1"></button>
+                        <button class="slider-dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300" data-index="2"></button>
+                        <button class="slider-dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300" data-index="3"></button>
+                        <button class="slider-dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300" data-index="4"></button>
+                        <button class="slider-dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300" data-index="5"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── HERO TEXT BLOCK ── -->
+            <div class="bg-background">
+                <div class="max-w-5xl mx-auto px-6 py-12 text-center">
+
+                    <!-- Location tag -->
+                    <div class="inline-flex items-center gap-2 text-[10px] font-headline font-semibold text-muted uppercase tracking-widest mb-5">
+                        <span class="material-symbols-outlined text-primary text-sm">location_on</span>
+                        MQPQ+6GC, Chikhali · Talawade · Pimpri-Chinchwad, Maharashtra
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-headline font-black text-slate-900 uppercase leading-tight mb-4">
+                        Car Service &amp; Repair<br>
+                        <span class="text-primary font-bold">in Chikhali, Pune</span>
+                    </h1>
+
+                    <!-- Interactive Counter Stats -->
+                    <div class="grid grid-cols-3 max-w-4xl mx-auto my-10 bg-slate-950 border border-slate-800/80 rounded-[1.5rem] md:rounded-[2rem] shadow-2xl reveal-up opacity-0 overflow-hidden divide-x divide-slate-800">
+                        <!-- Stat 1 -->
+                        <div class="flex flex-col items-center py-5 px-2 md:py-8 md:px-6">
+                            <span class="text-xl sm:text-2xl md:text-5xl font-headline font-black text-white flex items-center justify-center">
+                                <span data-target="5000" class="tabular-nums">0</span>+
+                            </span>
+                            <span class="text-[8px] sm:text-[10px] md:text-xs font-headline font-semibold text-slate-400 uppercase tracking-widest mt-2 text-center leading-tight">Happy Owners</span>
+                        </div>
+                        <!-- Stat 2 -->
+                        <div class="flex flex-col items-center py-5 px-2 md:py-8 md:px-6">
+                            <span class="text-xl sm:text-2xl md:text-5xl font-headline font-black text-primary flex items-center justify-center">
+                                <span data-target="15000" class="tabular-nums">0</span>+
+                            </span>
+                            <span class="text-[8px] sm:text-[10px] md:text-xs font-headline font-semibold text-slate-400 uppercase tracking-widest mt-2 text-center leading-tight">Cars Serviced</span>
+                        </div>
+                        <!-- Stat 3 -->
+                        <div class="flex flex-col items-center py-5 px-2 md:py-8 md:px-6">
+                            <span class="text-xl sm:text-2xl md:text-5xl font-headline font-black text-white flex items-center justify-center">
+                                <span data-target="99" class="tabular-nums">0</span>%
+                            </span>
+                            <span class="text-[8px] sm:text-[10px] md:text-xs font-headline font-semibold text-slate-400 uppercase tracking-widest mt-2 text-center leading-tight">Satisfaction</span>
+                        </div>
+                    </div>
+
+                    <!-- Subtext — what customers search for -->
+                    <p class="text-slate-700 text-base md:text-lg font-body font-light max-w-2xl mx-auto mb-3 leading-relaxed">
+                        Trusted multibrand garage for <strong class="text-slate-900 font-semibold">car service, denting &amp; painting, AC repair, wheel alignment, oil change, engine diagnostics</strong> and ceramic coating — all brands, all models.
+                    </p>
+                    <p class="text-muted text-sm mb-9">
+                        BMW · Audi · Mercedes · Toyota · Honda · Hyundai · Kia · Mahindra · Tata · Maruti Suzuki · Volkswagen
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-4 max-w-md mx-auto md:max-w-none">
+                        <!-- Row 1: Book & Call (side by side on mobile, inline on desktop) -->
+                        <div class="flex flex-row w-full md:w-auto gap-3 md:gap-4">
+                            <a href="#booking"
+                               class="btn-precision text-white flex-1 md:flex-none text-center justify-center py-4 px-4 sm:px-8 rounded-full font-headline font-bold text-[11px] sm:text-sm tracking-widest flex items-center gap-2 group whitespace-nowrap">
+                                Book slot
+                                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+                            </a>
+                            <a href="tel:+919970745411"
+                               class="btn-secondary-custom flex-1 md:flex-none text-center justify-center py-4 px-4 sm:px-8 rounded-full font-headline font-semibold text-[11px] sm:text-sm tracking-widest flex items-center gap-2 whitespace-nowrap">
+                                <span class="material-symbols-outlined text-sm">phone</span>Call Now
+                            </a>
+                        </div>
+                        <!-- Row 2: WhatsApp (full width on mobile, inline on desktop) -->
+                        <a href="https://wa.me/919970745411?text=Hi%20Siddhivinayak%20Car%20Care%2C%20I%27d%20like%20to%20book%20a%20service."
+                           target="_blank" rel="noopener"
+                           class="w-full md:w-auto text-center justify-center py-4 px-8 rounded-full bg-[#25D366] hover:bg-[#1ebe5a] text-white font-headline font-bold text-[11px] sm:text-sm tracking-widest flex items-center gap-2 transition-all hover:-translate-y-0.5 shadow-lg shadow-green-600/10 whitespace-nowrap">
+                            <span class="material-symbols-outlined text-sm">chat</span>WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ═══════════════════════════════════════════════════
+             2. BRANDS WE SERVICE (LOGO GRID)
+        ════════════════════════════════════════════════════ -->
+
+        <section id="brands" class="py-10 px-6 bg-surface border-y border-outline">
+            <div class="max-w-7xl mx-auto text-center mb-6">
+                <h2 class="text-3xl md:text-5xl font-headline font-bold text-slate-900 uppercase tracking-wide">
+                    Brands WE WORK ON
+                </h2>
+            </div>
+
+            <!-- Logo Infinite Loop Slider (LTR) -->
+            <div class="brands-marquee-container max-w-7xl mx-auto py-4">
+                <div class="animate-marquee-ltr gap-4">
+                    
+                    <!-- Set 1 -->
+                    <div class="flex gap-4">
+                        <!-- BMW -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="Assests/download.jfif" alt="BMW" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-lg">BMW</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">BMW</span>
+                        </div>
+                        <!-- Audi -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="Assests/audi logo.jfif" alt="Audi" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-lg">AUDI</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Audi</span>
+                        </div>
+                        <!-- Mercedes -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="Assests/mercedes.jfif" alt="Mercedes-Benz" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-sm">MB</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Mercedes</span>
+                        </div>
+                        <!-- Volkswagen -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="Assests/Volkswagen.jfif" alt="Volkswagen" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-lg">VW</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Volkswagen</span>
+                        </div>
+                        <!-- Jaguar -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="Assests/jaguar.png" alt="Jaguar" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-lg">JLR</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Jaguar</span>
+                        </div>
+                        <!-- Toyota -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="Assests/toyota.jfif" alt="Toyota" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-lg">T</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Toyota</span>
+                        </div>
+                        <!-- Honda -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Honda_logo.svg/120px-Honda_logo.svg.png" alt="Honda" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-lg">H</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Honda</span>
+                        </div>
+                        <!-- Hyundai -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="Assests/Hyundai.png" alt="Hyundai" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-lg">H</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Hyundai</span>
+                        </div>
+                        <!-- Kia -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Kia-logo.svg/120px-Kia-logo.svg.png" alt="Kia" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-lg">KIA</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Kia</span>
+                        </div>
+                        <!-- Mahindra -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="Assests/Mahindra.jfif" alt="Mahindra" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-sm">MHD</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Mahindra</span>
+                        </div>
+                        <!-- Tata -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/120px-Tata_logo.svg.png" alt="Tata Motors" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-lg">TATA</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Tata Motors</span>
+                        </div>
+                        <!-- Maruti Suzuki -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="Assests/Maruti Suzuki.png" alt="Maruti Suzuki" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-sm">MSI</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Maruti Suzuki</span>
+                        </div>
+                    </div>
+
+                    <!-- Set 2 -->
+                    <div class="flex gap-4">
+                        <!-- BMW -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="Assests/download.jfif" alt="BMW" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-lg">BMW</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">BMW</span>
+                        </div>
+                        <!-- Audi -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="Assests/audi logo.jfif" alt="Audi" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-lg">AUDI</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Audi</span>
+                        </div>
+                        <!-- Mercedes -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="Assests/mercedes.jfif" alt="Mercedes-Benz" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-sm">MB</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Mercedes</span>
+                        </div>
+                        <!-- Volkswagen -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="Assests/Volkswagen.jfif" alt="Volkswagen" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-lg">VW</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Volkswagen</span>
+                        </div>
+                        <!-- Jaguar -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="Assests/jaguar.png" alt="Jaguar" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-lg">JLR</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Jaguar</span>
+                        </div>
+                        <!-- Toyota -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="Assests/toyota.jfif" alt="Toyota" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-lg">T</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Toyota</span>
+                        </div>
+                        <!-- Honda -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Honda_logo.svg/120px-Honda_logo.svg.png" alt="Honda" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-lg">H</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Honda</span>
+                        </div>
+                        <!-- Hyundai -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="Assests/Hyundai.png" alt="Hyundai" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-lg">H</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Hyundai</span>
+                        </div>
+                        <!-- Kia -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Kia-logo.svg/120px-Kia-logo.svg.png" alt="Kia" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-lg">KIA</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Kia</span>
+                        </div>
+                        <!-- Mahindra -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="Assests/Mahindra.jfif" alt="Mahindra" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-sm">MHD</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Mahindra</span>
+                        </div>
+                        <!-- Tata -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/120px-Tata_logo.svg.png" alt="Tata Motors" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-lg">TATA</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Tata Motors</span>
+                        </div>
+                        <!-- Maruti Suzuki -->
+                        <div class="brand-logo-card flex flex-col items-center justify-center gap-3 p-5 bg-surface-light border border-outline rounded-2xl w-[150px] shrink-0">
+                            <img src="Assests/Maruti Suzuki.png" alt="Maruti Suzuki" class="h-16 object-contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <span class="hidden items-center justify-center w-12 h-12 text-slate-900 font-headline font-black text-sm">MSI</span>
+                            <span class="text-[9px] font-headline uppercase tracking-widest text-muted">Maruti Suzuki</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Disclaimer text -->
+            <p class="text-center text-muted text-[10px] font-light mt-10 tracking-wider">And many more — if it runs on four wheels, we've got it covered.</p>
+        </section>
+
+
+        <!-- ═══════════════════════════════════════════════════
+             3. SERVICES SECTION
+        ════════════════════════════════════════════════════ -->
+        <section id="services" class="py-12 px-6 bg-surface border-t border-outline">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+                    <div class="reveal-up opacity-0">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4 text-[9px] text-primary tracking-widest uppercase font-bold font-headline">
+                            <span class="material-symbols-outlined text-xs">build</span>OUR WORK BENCH
+                        </div>
+                        <h2 class="text-5xl md:text-7xl font-headline font-light text-slate-900 uppercase leading-none">
+                            Our <span class="text-primary italic">Services</span>
+                        </h2>
+                    </div>
+                    <p class="reveal-up opacity-0 text-on-surface max-w-md text-sm md:text-base font-light leading-relaxed">
+                        Comprehensive mechanical diagnostics, bespoke aesthetic restorations, and multi-point calibration protocols handled by certified engineers.
+                    </p>
+                </div>
+
+                <!-- Bento Hero Cards -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-8">
+                    <!-- Wide Feature Card -->
+                    <div class="lg:col-span-8 bento-card overflow-hidden p-10 md:p-12 flex flex-col justify-between group cursor-pointer relative min-h-[380px]">
+                        <div class="absolute inset-0 z-0">
+                            <img alt="Premium Car Servicing Siddhivinayak" class="w-full h-full object-cover opacity-[0.85] group-hover:scale-105 transition-transform duration-1000" src="Assests/5954b96c-86a1-486c-a92c-9de9e0a294dd.jfif" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                        </div>
+                        <div class="relative z-10 flex justify-between items-start">
+                            <div>
+                                <span class="text-[9px] uppercase tracking-widest font-bold text-primary mb-2 flex items-center gap-1.5 font-headline">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>BENCHMARK MAINTENANCE
+                                </span>
+                                <h3 class="text-3xl md:text-5xl font-headline font-light text-white uppercase leading-none">Premium Car<br/>Servicing</h3>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-white font-headline text-xs uppercase tracking-widest font-semibold bg-white/10 px-3 py-1 rounded-full border border-white/20">Full 40-Point Suite</div>
+                            </div>
+                        </div>
+                        <div class="relative z-10 mt-8 max-w-md">
+                            <p class="text-sm text-slate-200 font-light leading-relaxed">Engine tuning, fluid dynamics review, exhaust analysis, oil replacements, and computerized parameters check.</p>
+                        </div>
+                    </div>
+
+                    <!-- Detailing Card -->
+                    <div class="lg:col-span-4 bento-card overflow-hidden p-10 group relative cursor-pointer flex flex-col justify-between min-h-[380px]">
+                        <div class="absolute inset-0 z-0">
+                            <img alt="Car Detailing Mirror Finish" class="w-full h-full object-cover opacity-[0.85] group-hover:scale-105 transition-transform duration-1000" src="Assests/62ab1b96-9f09-4ced-8486-7bc7e23343be.jfif" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                        </div>
+                        <div class="relative z-10 flex flex-col justify-between h-full">
+                            <span class="material-symbols-outlined text-primary text-5xl mb-8">health_metrics</span>
+                            <div>
+                                <span class="text-[9px] uppercase tracking-[0.2em] font-bold text-slate-300 mb-2 block font-headline">BEST FOR SHOWROOM GLOW</span>
+                                <h4 class="text-2xl md:text-3xl font-headline font-light mb-3 text-white uppercase">Car Wash &amp; Detailing</h4>
+                                <p class="text-xs text-slate-200 font-light leading-relaxed">Decontamination, deep interior sanitization, premium wax coat, and advanced polish for a perfect mirror finish.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 14 Services Tile Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4">
+                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
+                        <span class="material-symbols-outlined text-secondary text-2xl">build</span>
+                        <div class="mt-3">
+                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">General Service</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light">Engine health &amp; fluid top-ups</p>
+                        </div>
+                    </div>
+                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
+                        <span class="material-symbols-outlined text-secondary text-2xl">computer</span>
+                        <div class="mt-3">
+                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Engine Diagnostics</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light">Advanced OBD diagnostic scans</p>
+                        </div>
+                    </div>
+                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
+                        <span class="material-symbols-outlined text-secondary text-2xl">oil_barrel</span>
+                        <div class="mt-3">
+                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Oil Change</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light">Synthetic / mineral lube change</p>
+                        </div>
+                    </div>
+                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
+                        <span class="material-symbols-outlined text-secondary text-2xl">tire_repair</span>
+                        <div class="mt-3">
+                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Brake Repair</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light">Pad replacement &amp; rotor turning</p>
+                        </div>
+                    </div>
+                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
+                        <span class="material-symbols-outlined text-secondary text-2xl">ac_unit</span>
+                        <div class="mt-3">
+                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">AC Service</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light">Gas recharge &amp; filter cleanse</p>
+                        </div>
+                    </div>
+                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
+                        <span class="material-symbols-outlined text-secondary text-2xl">360</span>
+                        <div class="mt-3">
+                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Wheel Alignment</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light">3D digital wheel calibration</p>
+                        </div>
+                    </div>
+                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
+                        <span class="material-symbols-outlined text-secondary text-2xl">brush</span>
+                        <div class="mt-3">
+                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Denting &amp; Painting</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light">Scratch removal &amp; paint matching</p>
+                        </div>
+                    </div>
+                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
+                        <span class="material-symbols-outlined text-secondary text-2xl">stars</span>
+                        <div class="mt-3">
+                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Car Detailing</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light">Ceramic &amp; Graphene shield coat</p>
+                        </div>
+                    </div>
+                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
+                        <span class="material-symbols-outlined text-secondary text-2xl">battery_charging_full</span>
+                        <div class="mt-3">
+                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Battery Check</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light">Exide / Amaron replacements</p>
+                        </div>
+                    </div>
+                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
+                        <span class="material-symbols-outlined text-secondary text-2xl">settings_input_component</span>
+                        <div class="mt-3">
+                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Suspension Repair</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light">Shockers &amp; link rod overhaul</p>
+                        </div>
+                    </div>
+                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
+                        <span class="material-symbols-outlined text-secondary text-2xl">circle</span>
+                        <div class="mt-3">
+                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Tyre Services</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light">New tyres fitting &amp; balancing</p>
+                        </div>
+                    </div>
+                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
+                        <span class="material-symbols-outlined text-secondary text-2xl">local_car_wash</span>
+                        <div class="mt-3">
+                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Eco Car Wash</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light">High pressure vacuum clean</p>
+                        </div>
+                    </div>
+                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
+                        <span class="material-symbols-outlined text-secondary text-2xl">assignment</span>
+                        <div class="mt-3">
+                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Insurance Claims</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light">Cashless claim guidance</p>
+                        </div>
+                    </div>
+                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
+                        <span class="material-symbols-outlined text-secondary text-2xl">local_taxi</span>
+                        <div class="mt-3">
+                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Pickup &amp; Drop</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light">Safe contactless car pickup</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ═══════════════════════════════════════════════════
+             5. HOW IT WORKS — SERVICE PROCESS
+        ════════════════════════════════════════════════════ -->
+        <section id="how-it-works" class="py-12 px-6 bg-background border-t border-outline relative overflow-hidden">
+            <!-- Glow accents -->
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-secondary/4 rounded-full blur-[180px]"></div>
+                <div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-primary/4 rounded-full blur-[160px]"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="text-center mb-16 reveal-up opacity-0">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4 text-[9px] text-secondary tracking-widest uppercase font-bold font-headline">
+                        <span class="material-symbols-outlined text-xs">route</span>SERVICE JOURNEY
+                    </div>
+                    <h2 class="text-5xl md:text-7xl font-headline font-light text-slate-900 uppercase leading-none">
+                        How It <span class="text-secondary italic">Works</span>
+                    </h2>
+                    <p class="text-muted text-sm font-light mt-4 max-w-xl mx-auto leading-relaxed">
+                        Our clinically structured 4-step process ensures your vehicle is handled with absolute precision — start to finish.
+                    </p>
+                </div>
+
+                <!-- 4-step Process Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal-up opacity-0">
+
+                    <!-- Step 1 -->
+                    <div class="relative flex flex-col items-start p-8 bg-surface border border-outline rounded-[2rem] group hover:border-secondary hover:bg-surface-light transition-all duration-400 overflow-hidden">
+                        <div class="absolute top-5 right-5 font-headline font-black text-7xl text-outline/20 leading-none select-none">01</div>
+                        <div class="w-14 h-14 rounded-2xl bg-secondary/10 border border-secondary/20 flex items-center justify-center mb-6 group-hover:bg-secondary/20 group-hover:border-secondary/40 transition-all">
+                            <span class="material-symbols-outlined text-secondary text-2xl">local_taxi</span>
+                        </div>
+                        <span class="text-[9px] font-headline uppercase tracking-widest text-secondary font-bold mb-2">STEP 01</span>
+                        <h3 class="text-xl font-headline font-semibold text-slate-900 uppercase mb-3">Drop Off or
+Pickup</h3>
+                        <p class="text-xs text-muted font-light leading-relaxed">Drive in to our Chikhali lab or schedule a doorstep pickup. We cover all of PCMC, Chikhali, Talawade, and Moshi.</p>
+                        <!-- Connector line (hidden on mobile/last) -->
+                        <div class="hidden lg:block absolute top-1/2 -right-3 w-6 h-px bg-outline z-20"></div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative flex flex-col items-start p-8 bg-surface border border-outline rounded-[2rem] group hover:border-secondary hover:bg-surface-light transition-all duration-400 overflow-hidden">
+                        <div class="absolute top-5 right-5 font-headline font-black text-7xl text-outline/20 leading-none select-none">02</div>
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/20 group-hover:border-primary/40 transition-all">
+                            <span class="material-symbols-outlined text-primary text-2xl">computer</span>
+                        </div>
+                        <span class="text-[9px] font-headline uppercase tracking-widest text-primary font-bold mb-2">STEP 02</span>
+                        <h3 class="text-xl font-headline font-semibold text-slate-900 uppercase mb-3">Digital
+Diagnostics</h3>
+                        <p class="text-xs text-muted font-light leading-relaxed">Advanced OBD scan, multi-point visual inspection, and computerized health report covering 40+ system parameters.</p>
+                        <div class="hidden lg:block absolute top-1/2 -right-3 w-6 h-px bg-outline z-20"></div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative flex flex-col items-start p-8 bg-surface border border-outline rounded-[2rem] group hover:border-secondary hover:bg-surface-light transition-all duration-400 overflow-hidden">
+                        <div class="absolute top-5 right-5 font-headline font-black text-7xl text-outline/20 leading-none select-none">03</div>
+                        <div class="w-14 h-14 rounded-2xl bg-secondary/10 border border-secondary/20 flex items-center justify-center mb-6 group-hover:bg-secondary/20 group-hover:border-secondary/40 transition-all">
+                            <span class="material-symbols-outlined text-secondary text-2xl">engineering</span>
+                        </div>
+                        <span class="text-[9px] font-headline uppercase tracking-widest text-secondary font-bold mb-2">STEP 03</span>
+                        <h3 class="text-xl font-headline font-semibold text-slate-900 uppercase mb-3">Precision Repair</h3>
+                        <p class="text-xs text-muted font-light leading-relaxed">Certified technicians execute repairs using 100% OEM parts. You approve the quote digitally before a single bolt is turned.</p>
+                        <div class="hidden lg:block absolute top-1/2 -right-3 w-6 h-px bg-outline z-20"></div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative flex flex-col items-start p-8 bg-surface border border-outline rounded-[2rem] group hover:border-secondary hover:bg-surface-light transition-all duration-400 overflow-hidden">
+                        <div class="absolute top-5 right-5 font-headline font-black text-7xl text-outline/20 leading-none select-none">04</div>
+                        <div class="w-14 h-14 rounded-2xl bg-green-50 border border-green-200 flex items-center justify-center mb-6 group-hover:bg-green-100 group-hover:border-green-300 transition-all">
+                            <span class="material-symbols-outlined text-green-600 text-2xl">verified</span>
+                        </div>
+                        <span class="text-[9px] font-headline uppercase tracking-widest text-green-600 font-bold mb-2">STEP 04</span>
+                        <h3 class="text-xl font-headline font-semibold text-slate-900 uppercase mb-3">Quality Delivery</h3>
+                        <p class="text-xs text-muted font-light leading-relaxed">Final quality sign-off, post-service clean &amp; polish, and safe delivery back to you — with full service documentation.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ═══════════════════════════════════════════════════
+             7. BOOKING / CONTACT FORM
+        ════════════════════════════════════════════════════ -->
+        <section id="booking" class="py-12 px-6 bg-surface border-t border-outline">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                <!-- Info Column -->
+                <div class="lg:col-span-5 reveal-up opacity-0">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4 text-[9px] text-primary tracking-widest uppercase font-bold font-headline">
+                        <span class="material-symbols-outlined text-xs">send</span>SECURE APPOINTMENT
+                    </div>
+                    <h2 class="text-5xl lg:text-6xl font-headline font-light text-slate-900 uppercase leading-none mb-5">
+                        Book Your <span class="text-primary italic">Service</span>
+                    </h2>
+                    <p class="text-on-surface text-sm font-light leading-relaxed mb-8">
+                        Enter your contact details and select your service protocol. Our coordination desk will confirm your slot within 10 minutes.
+                    </p>
+
+                    <!-- Emergency block -->
+                    <div class="bg-red-50 border border-red-200 p-6 rounded-2xl mb-8">
+                        <div class="flex items-center gap-3 text-primary font-headline uppercase tracking-wider text-xs font-semibold mb-2">
+                            <span class="material-symbols-outlined text-lg">emergency_home</span>EMERGENCY ROAD ASSISTANCE
+                        </div>
+                        <p class="text-[11px] text-slate-800 font-light leading-relaxed">Stranded with a breakdown or require towing support in Chikhali / Spine Road area?</p>
+                        <a href="tel:+919970745411" class="inline-flex items-center gap-2 text-white font-headline text-xs font-bold uppercase mt-3 tracking-widest bg-primary px-4 py-2 rounded-lg hover:bg-[#FF4D5A] transition-colors">
+                            <span class="material-symbols-outlined text-xs">call</span>Direct Hotlink
+                        </a>
+                    </div>
+
+                    <!-- Operational details -->
+                    <div class="space-y-4 text-xs font-light text-muted">
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-sm">schedule</span>Monday – Sunday: 09:00 AM – 08:00 PM</div>
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-sm">location_on</span>MQPQ+6GC, Chikhali, Pimpri-Chinchwad, Maharashtra</div>
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-sm">chat</span>Average WhatsApp Response: 5 Minutes</div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="lg:col-span-7 reveal-up opacity-0">
+                    <div class="bg-surface-light p-8 md:p-10 rounded-[2.5rem] border border-outline shadow-2xl">
+                        <h4 class="text-xl font-headline font-light text-slate-900 uppercase mb-8">Booking Request</h4>
+                        <form id="booking-form" class="space-y-5" onsubmit="handleBooking(event)">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-[9px] uppercase tracking-widest text-muted mb-2 font-headline">Customer Name</label>
+                                    <input id="input-name" required class="form-input" placeholder="Your full name" type="text" />
+                                </div>
+                                <div>
+                                    <label class="block text-[9px] uppercase tracking-widest text-muted mb-2 font-headline">Phone Number</label>
+                                    <input id="input-phone" required class="form-input" placeholder="Mobile contact" type="tel" />
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-[9px] uppercase tracking-widest text-muted mb-2 font-headline">Select Service Mission</label>
+                                <select id="input-service" class="form-input cursor-pointer">
+                                    <option value="">General Diagnostic Servicing</option>
+                                    <option value="">Brake / Suspension Overhaul</option>
+                                    <option value="">Premium Ceramic Detailing</option>
+                                    <option value="">Denting &amp; Painting</option>
+                                    <option value="">Breakdown Assistance</option>
+                                    <option value="">AC Service</option>
+                                    <option value="">Wheel Alignment</option>
+                                    <option value="">Insurance Claim</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-[9px] uppercase tracking-widest text-muted mb-2 font-headline">Specific Symptoms / Car Model</label>
+                                <textarea id="input-message" class="form-input h-28 resize-none" placeholder="E.g., Honda City, brake squealing sound, or dent repair inquiry"></textarea>
+                            </div>
+                            <button id="submit-btn" type="submit" class="btn-precision w-full text-white py-5 rounded-2xl font-headline font-light text-base tracking-wider">
+                                TRANSMIT SERVICE BOOKING
+                            </button>
+                        </form>
+                        <!-- Confirmation Message (hidden) -->
+                        <div id="booking-success" class="hidden mt-6 bg-green-50 border border-green-200 rounded-2xl p-6 text-center">
+                            <span class="material-symbols-outlined text-green-600 text-4xl mb-3 block">check_circle</span>
+                            <h4 class="text-slate-900 font-headline font-bold uppercase text-sm mb-1">Booking Request Transmitted!</h4>
+                            <p class="text-muted text-xs font-light">Our team will contact you within 10 minutes to confirm your slot.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════
+             11. LOCATION & MAP
+        ════════════════════════════════════════════════════ -->
+        <section id="contact" class="py-16 bg-surface px-6 border-t border-outline relative">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                    <div class="lg:col-span-5 reveal-up opacity-0">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4 text-[9px] text-secondary tracking-widest uppercase font-bold font-headline">
+                            <span class="material-symbols-outlined text-xs">explore</span>PHYSICAL LAB
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-headline font-light text-slate-900 uppercase leading-none mb-8">
+                            Location &amp; <span class="text-secondary italic">Facility</span>
+                        </h2>
+                        
+                        <div class="space-y-4">
+                            <!-- Card 1: Facility Location -->
+                            <div class="group flex gap-4 p-5 bg-white border border-outline rounded-2xl transition-all duration-300 hover:border-secondary hover:shadow-lg hover:shadow-secondary/5 hover:-translate-y-0.5">
+                                <div class="flex w-12 h-12 shrink-0 items-center justify-center bg-secondary/10 text-secondary rounded-xl group-hover:bg-secondary group-hover:text-white transition-all duration-300">
+                                    <span class="material-symbols-outlined text-xl">location_on</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs uppercase tracking-widest text-slate-900 font-bold mb-1 font-headline">Facility Location</h4>
+                                    <p class="text-xs text-slate-600 font-light leading-relaxed font-body">Siddhivinayaka Car Care, MQPQ+6GC Pimpri-Chinchwad, Maharashtra (Opposite Spine Petrol Pump).</p>
+                                </div>
+                            </div>
+                            <!-- Card 2: Operating Hours -->
+                            <div class="group flex gap-4 p-5 bg-white border border-outline rounded-2xl transition-all duration-300 hover:border-secondary hover:shadow-lg hover:shadow-secondary/5 hover:-translate-y-0.5">
+                                <div class="flex w-12 h-12 shrink-0 items-center justify-center bg-secondary/10 text-secondary rounded-xl group-hover:bg-secondary group-hover:text-white transition-all duration-300">
+                                    <span class="material-symbols-outlined text-xl">schedule</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs uppercase tracking-widest text-slate-900 font-bold mb-1 font-headline">Operating Hours</h4>
+                                    <p class="text-xs text-slate-600 font-light leading-relaxed font-body">Monday – Sunday: 09:00 AM – 08:00 PM</p>
+                                </div>
+                            </div>
+                            <!-- Card 3: Parking & Access -->
+                            <div class="group flex gap-4 p-5 bg-white border border-outline rounded-2xl transition-all duration-300 hover:border-secondary hover:shadow-lg hover:shadow-secondary/5 hover:-translate-y-0.5">
+                                <div class="flex w-12 h-12 shrink-0 items-center justify-center bg-secondary/10 text-secondary rounded-xl group-hover:bg-secondary group-hover:text-white transition-all duration-300">
+                                    <span class="material-symbols-outlined text-xl">local_parking</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs uppercase tracking-widest text-slate-900 font-bold mb-1 font-headline">Parking &amp; Access</h4>
+                                    <p class="text-xs text-slate-600 font-light leading-relaxed font-body">Ample visitor parking directly outside the diagnostic bays. Smooth ramp access.</p>
+                                </div>
+                            </div>
+                            <!-- Card 4: Service Coverage -->
+                            <div class="group flex gap-4 p-5 bg-white border border-outline rounded-2xl transition-all duration-300 hover:border-secondary hover:shadow-lg hover:shadow-secondary/5 hover:-translate-y-0.5">
+                                <div class="flex w-12 h-12 shrink-0 items-center justify-center bg-secondary/10 text-secondary rounded-xl group-hover:bg-secondary group-hover:text-white transition-all duration-300">
+                                    <span class="material-symbols-outlined text-xl">map</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs uppercase tracking-widest text-slate-900 font-bold mb-1 font-headline">Service Coverage</h4>
+                                    <p class="text-xs text-slate-600 font-light leading-relaxed font-body">Chikhali, Talawade, Moshi, Nigdi, Akurdi, Bhosari, Yamunanagar, PCMC.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="lg:col-span-7 h-[300px] md:h-[480px] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden relative border border-outline reveal-up opacity-0 shadow-2xl">
+                        <iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            src="https://maps.google.com/maps?q=18.685574,73.788772&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                            style="border:0; filter: grayscale(10%);" width="100%"></iframe>
+                        <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/5 via-transparent to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════
+             4. WORKSHOP GALLERY (Shifted Above Footer)
+        ════════════════════════════════════════════════════ -->
+        <section id="gallery" class="py-12 bg-surface border-t border-outline relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-8 reveal-up opacity-0">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4 text-[9px] text-secondary tracking-widest uppercase font-bold font-headline">
+                            <span class="material-symbols-outlined text-xs">photo_library</span>VISUAL EVIDENCE
+                        </div>
+                        <h2 class="text-5xl md:text-7xl font-headline font-light text-slate-900 uppercase leading-none">
+                            Workshop <span class="text-primary italic">Gallery</span>
+                        </h2>
+                    </div>
+                    <p class="text-muted text-xs md:text-sm font-light max-w-xs uppercase tracking-widest leading-relaxed">
+                        Undeniable physical results from our high-precision lab in Chikhali, Pune.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 reveal-up opacity-0">
+                    <!-- Image 1: Wide -->
+                    <div class="gallery-img lg:col-span-2 aspect-video lg:aspect-[16/8]">
+                        <img src="Assests/25a537d9-fd60-4c7b-a337-bd91798571c2.jfif" alt="Brake Bay Alignment Lab Siddhivinayak Car Care" class="w-full h-full object-cover" loading="lazy">
+                        <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Brake Bay Alignment</span></div>
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="gallery-img aspect-video lg:aspect-[8/8]">
+                        <img src="Assests/52e272cc-92c3-4fa2-9d4b-df4391d82afa.jfif" alt="Precision Chassis Repair" class="w-full h-full object-cover" loading="lazy">
+                        <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Precision Chassis Repair</span></div>
+                    </div>
+                    <!-- Image 3 -->
+                    <div class="gallery-img aspect-video">
+                        <img src="Assests/5954b96c-86a1-486c-a92c-9de9e0a294dd.jfif" alt="Advanced Engine Tune-up" class="w-full h-full object-cover" loading="lazy">
+                        <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Advanced Engine Tune-up</span></div>
+                    </div>
+                    <!-- Image 4 -->
+                    <div class="gallery-img aspect-video">
+                        <img src="Assests/62ab1b96-9f09-4ced-8486-7bc7e23343be.jfif" alt="Premium Detailing Glow" class="w-full h-full object-cover" loading="lazy">
+                        <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Premium Detailing Glow</span></div>
+                    </div>
+                    <!-- Image 5 -->
+                    <div class="gallery-img aspect-video">
+                        <img src="Assests/9f9e22d9-5b11-4b5e-8944-3267c5551930.jfif" alt="Suspension Diagnostics Lab" class="w-full h-full object-cover" loading="lazy">
+                        <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Suspension Diagnostics Lab</span></div>
+                    </div>
+                    <!-- Image 6: Wide -->
+                    <div class="gallery-img lg:col-span-2 aspect-video lg:aspect-[16/8]">
+                        <img src="Assests/Hero bg (1).jfif" alt="Premium Service Lounge" class="w-full h-full object-cover" loading="lazy">
+                        <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Premium Service Lounge</span></div>
+                    </div>
+                    <!-- Image 7 -->
+                    <div class="gallery-img aspect-video lg:aspect-[8/8]">
+                        <img src="Assests/Hero bg (2).jfif" alt="Clinical Diagnostics Lab" class="w-full h-full object-cover" loading="lazy">
+                        <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Clinical Diagnostics Lab</span></div>
+                    </div>
+                    <!-- Image 8 -->
+                    <div class="gallery-img aspect-video">
+                        <img src="Assests/Hero bg (3).jfif" alt="Motorsport Workshop" class="w-full h-full object-cover" loading="lazy">
+                        <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Motorsport Workshop</span></div>
+                    </div>
+                    <!-- Image 9 -->
+                    <div class="gallery-img aspect-video">
+                        <img src="Assests/WhatsApp Image 2026-03-28 at 1.29.16 PM.jpeg" alt="Under-Chassis Service" class="w-full h-full object-cover" loading="lazy">
+                        <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Under-Chassis Service</span></div>
+                    </div>
+                    <!-- Image 10 -->
+                    <div class="gallery-img aspect-video">
+                        <img src="Assests/WhatsApp Image 2026-03-28 at 1.29.17 PM (1).jpeg" alt="Wheel Calibration Hub" class="w-full h-full object-cover" loading="lazy">
+                        <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Wheel Calibration Hub</span></div>
+                    </div>
+                    <!-- Image 13: Wide -->
+                    <div class="gallery-img lg:col-span-2 aspect-video lg:aspect-[16/8]">
+                        <img src="Assests/WhatsApp Image 2026-03-28 at 1.29.18 PM (2).jpeg" alt="Brake Disc Overhaul" class="w-full h-full object-cover" loading="lazy">
+                        <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Brake Disc Overhaul</span></div>
+                    </div>
+                    <!-- Image 11 -->
+                    <div class="gallery-img aspect-video lg:aspect-[8/8]">
+                        <img src="Assests/WhatsApp Image 2026-03-28 at 1.29.17 PM.jpeg" alt="Towing & Recovery Assist" class="w-full h-full object-cover" loading="lazy">
+                        <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Towing & Recovery Assist</span></div>
+                    </div>
+                    <!-- Image 12 -->
+                    <div class="gallery-img aspect-video">
+                        <img src="Assests/WhatsApp Image 2026-03-28 at 1.29.18 PM (1).jpeg" alt="Engine Bay Calibrations" class="w-full h-full object-cover" loading="lazy">
+                        <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Engine Bay Calibrations</span></div>
+                    </div>
+                    <!-- Image 14 -->
+                    <div class="gallery-img aspect-video">
+                        <img src="Assests/WhatsApp Image 2026-03-28 at 1.29.18 PM.jpeg" alt="Executive Quality Check" class="w-full h-full object-cover" loading="lazy">
+                        <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Executive Quality Check</span></div>
+                    </div>
+                    <!-- Image 15 -->
+                    <div class="gallery-img aspect-video">
+                        <img src="Assests/WhatsApp Image 2026-03-28 at 1.29.19 PM.jpeg" alt="Eco Wash & Protection" class="w-full h-full object-cover" loading="lazy">
+                        <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Eco Wash & Protection</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══════════════════════════════════════════════════
+         FOOTER
+    ════════════════════════════════════════════════════ -->
+    <footer class="bg-slate-950 text-white pt-16 pb-8 px-6 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 text-center md:text-left">
+            <!-- Column 1: SVCC Brand Identity & Socials -->
+            <div class="flex flex-col justify-between h-full items-center md:items-start">
+                <div>
+                    <span class="text-3xl font-headline font-black text-white uppercase tracking-tighter mb-4 block">
+                        SV<span class="text-primary">CC.</span>
+                    </span>
+                    <p class="text-slate-400 text-xs font-light leading-relaxed max-w-sm mb-6">
+                        Redefining automotive care through clinical precision and high-performance multibrand engineering. Dealership-quality repairs without the markup.
+                    </p>
+                </div>
+                <div class="flex gap-5 text-[10px] font-headline font-bold tracking-[0.2em] text-slate-500 uppercase justify-center md:justify-start mb-6 md:mb-0">
+                    <a class="hover:text-primary transition-colors" href="#">Instagram</a>
+                    <a class="hover:text-primary transition-colors" href="#">Facebook</a>
+                    <a class="hover:text-primary transition-colors" href="#">Google Rating</a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="md:pl-12">
+                <h5 class="font-headline font-bold text-slate-200 uppercase tracking-widest text-xs mb-4">Service Labs</h5>
+                <ul class="space-y-2 text-xs font-light text-slate-400">
+                    <li><a href="#services" class="hover:text-primary transition-colors">AC &amp; Coolant Service</a></li>
+                    <li><a href="#services" class="hover:text-primary transition-colors">3D Wheel Alignment</a></li>
+                    <li><a href="#services" class="hover:text-primary transition-colors">Cashless Claims</a></li>
+                    <li><a href="#services" class="hover:text-primary transition-colors">Denting &amp; Painting</a></li>
+                    <li><a href="#services" class="hover:text-primary transition-colors">Ceramic Coating &amp; Detailing</a></li>
+                    <li><a href="#services" class="hover:text-primary transition-colors">Engine OBD Diagnostics</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Facility & Support -->
+            <div class="flex flex-col justify-between h-full items-center md:items-start mt-6 md:mt-0">
+                <div>
+                    <h5 class="font-headline font-bold text-slate-200 uppercase tracking-widest text-xs mb-4">Pune Facility</h5>
+                    <p class="text-slate-400 text-xs mb-4 font-light leading-relaxed max-w-xs mx-auto md:mx-0">
+                        Spine Road, Talawade, Chikhali, Pimpri-Chinchwad, Pune - 411062
+                    </p>
+                    <div class="space-y-2 text-xs font-light flex flex-col items-center md:items-start">
+                        <a href="tel:+919970745411" class="text-white hover:text-primary transition-colors flex items-center gap-2 font-semibold justify-center md:justify-start">
+                            <span class="material-symbols-outlined text-sm text-secondary">phone</span>+91 99707 45411
+                        </a>
+                        <a href="https://wa.me/919970745411" target="_blank" class="text-[#25D366] hover:text-green-400 transition-colors flex items-center gap-2 font-semibold justify-center md:justify-start">
+                            <span class="material-symbols-outlined text-sm">chat</span>WhatsApp Chat
+                        </a>
+                    </div>
+                </div>
+                <!-- Towing Assistance and Hours -->
+                <div class="mt-6 space-y-3 flex flex-col items-center md:items-start w-full">
+                    <div class="inline-flex items-center gap-2 bg-red-950/40 border border-red-900/30 p-2 px-3 rounded-full justify-center mx-auto md:mx-0">
+                        <span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+                        <span class="text-[9px] text-slate-300 font-headline uppercase tracking-wider">Towing Help: <a href="tel:+919970745411" class="text-primary font-bold hover:underline font-body">Call Hotline</a></span>
+                    </div>
+                    <p class="text-[9px] text-slate-500 font-headline uppercase tracking-wider">
+                        Operating: Mon–Sun 9:00 AM – 8:00 PM
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto pt-7 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] text-slate-500 font-headline uppercase tracking-widest font-light text-center md:text-left">
+            <p>© 2026 Siddhivinayak Car Care. PCMC, Pune. All rights reserved.</p>
+            <div class="flex gap-6 justify-center md:justify-start">
+                <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+            </div>
+        </div>
+
+        <!-- SEO Keywords (hidden) -->
+        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-wrap gap-3 justify-center mt-6 border-t border-slate-900">
+            <span class="text-[8px] font-headline uppercase tracking-widest text-slate-700">Car Service in Chikhali</span>
+            <span class="text-[8px] text-slate-800">•</span>
+            <span class="text-[8px] font-headline uppercase tracking-widest text-slate-700">Garage in Talawade</span>
+            <span class="text-[8px] text-slate-800">•</span>
+            <span class="text-[8px] font-headline uppercase tracking-widest text-slate-700">Car Repair Pune</span>
+            <span class="text-[8px] text-slate-800">•</span>
+            <span class="text-[8px] font-headline uppercase tracking-widest text-slate-700">Multibrand Workshop PCMC</span>
+            <span class="text-[8px] text-slate-800">•</span>
+            <span class="text-[8px] font-headline uppercase tracking-widest text-slate-700">Ceramic Coating Pune</span>
+        </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════════════════
+         FLOATING WHATSAPP BUTTON
+    ════════════════════════════════════════════════════ -->
+    <a href="https://wa.me/919970745411?text=Hi%20Siddhivinayak%20Car%20Care%2C%20I%27d%20like%20to%20book%20a%20service." 
+       target="_blank" rel="noopener"
+       class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- ═══════════════════════════════════════════════════
+         STICKY BOTTOM CONVERSION BAR
+    ════════════════════════════════════════════════════ -->
+    <div class="sticky-bar">
+        <div class="bg-[#0D1117]/90 backdrop-blur-2xl border border-outline p-3 rounded-[2rem] shadow-2xl flex items-center justify-between gap-3">
+            <a href="tel:+919970745411" class="flex-1 flex items-center justify-center gap-2 bg-surface hover:bg-surface-light text-black border border-outline py-4 rounded-2xl transition-all active:scale-95 text-xs font-headline font-bold uppercase tracking-wider">
+                <span class="material-symbols-outlined text-sm text-black">call</span>CALL
+            </a>
+            <a href="https://wa.me/919970745411?text=Hi%20Siddhivinayak%20Car%20Care%2C%20I%27d%20like%20to%20book%20a%20service." target="_blank" class="flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white py-4 rounded-2xl transition-all active:scale-95 text-xs font-headline font-bold uppercase tracking-wider">
+                <span class="material-symbols-outlined text-sm">chat</span>WHATSAPP
+            </a>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         JAVASCRIPT
+    ════════════════════════════════════════════════════ -->
+    <script>
+        /* ── GSAP Scroll Reveals ── */
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.utils.toArray('.reveal-up').forEach((el) => {
+            gsap.fromTo(el,
+                { opacity: 0, y: 40 },
+                {
+                    opacity: 1, y: 0,
+                    duration: 0.85,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 88%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        });
+
+        /* ── Navbar scroll shrink ── */
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-lg', 'shadow-black/50');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2', 'shadow-lg', 'shadow-black/50');
+            }
+        });
+
+        /* ── Before / After Slider ── */
+        (function() {
+            const slider   = document.getElementById('ba-slider');
+            const divider  = document.getElementById('ba-divider');
+            const afterImg = slider?.querySelector('.ba-after');
+            if (!slider || !divider || !afterImg) return;
+
+            let dragging = false;
+
+            function setPosition(x) {
+                const rect = slider.getBoundingClientRect();
+                let pct = (x - rect.left) / rect.width;
+                pct = Math.min(Math.max(pct, 0.05), 0.95);
+                const pctStr = (pct * 100).toFixed(1) + '%';
+                divider.style.left = pctStr;
+                afterImg.style.clipPath = `inset(0 ${(100 - pct * 100).toFixed(1)}% 0 0)`;
+            }
+
+            divider.addEventListener('mousedown', (e) => { dragging = true; e.preventDefault(); });
+            window.addEventListener('mouseup', () => dragging = false);
+            slider.addEventListener('mousemove', (e) => { if (dragging) setPosition(e.clientX); });
+            divider.addEventListener('touchstart', (e) => { dragging = true; });
+            window.addEventListener('touchend', () => dragging = false);
+            slider.addEventListener('touchmove', (e) => { if (dragging) setPosition(e.touches[0].clientX); });
+        })();
+
+        /* ── Animated Counters ── */
+        function animateCounter(el, target, duration = 2000) {
+            let start = 0;
+            const step = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += step;
+                if (start >= target) { start = target; clearInterval(timer); }
+                el.textContent = Math.floor(start).toLocaleString();
+            }, 16);
+        }
+
+        const countersObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.dataset.target);
+                    animateCounter(el, target);
+                    countersObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('[data-target]').forEach(el => countersObserver.observe(el));
+
+        /* ── Booking Form ── */
+        function handleBooking(e) {
+            e.preventDefault();
+            const form    = document.getElementById('booking-form');
+            const success = document.getElementById('booking-success');
+            const btn     = document.getElementById('submit-btn');
+            btn.textContent = 'TRANSMITTING...';
+            btn.disabled = true;
+            setTimeout(() => {
+                form.style.opacity = '0.3';
+                form.style.pointerEvents = 'none';
+                success.classList.remove('hidden');
+                btn.textContent = 'TRANSMITTED ✓';
+            }, 1000);
+        }
+        /* ── Hero Image Slider ── */
+        (function() {
+            const slidesEl = document.getElementById('heroSlides');
+            const dots = document.querySelectorAll('.slider-dot');
+            const total = dots.length;
+            let current = 0;
+            let autoTimer;
+
+            function goTo(index) {
+                current = (index + total) % total;
+                slidesEl.style.transform = `translateX(-${current * 100}%)`;
+                dots.forEach((d, i) => {
+                    d.classList.toggle('active-dot', i === current);
+                    d.classList.toggle('bg-white', i === current);
+                    d.classList.toggle('w-5', i === current);
+                    d.classList.toggle('bg-white/40', i !== current);
+                    d.classList.toggle('w-2', i !== current);
+                });
+            }
+
+            function startAuto() {
+                autoTimer = setInterval(() => goTo(current + 1), 4000);
+            }
+            function stopAuto() { clearInterval(autoTimer); }
+
+            document.getElementById('sliderNext').addEventListener('click', () => { stopAuto(); goTo(current + 1); startAuto(); });
+            document.getElementById('sliderPrev').addEventListener('click', () => { stopAuto(); goTo(current - 1); startAuto(); });
+            dots.forEach((dot) => {
+                dot.addEventListener('click', () => { stopAuto(); goTo(parseInt(dot.dataset.index)); startAuto(); });
+            });
+
+            // Touch/swipe support
+            let touchStartX = 0;
+            slidesEl.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+            slidesEl.addEventListener('touchend', e => {
+                const diff = touchStartX - e.changedTouches[0].clientX;
+                if (Math.abs(diff) > 40) { stopAuto(); goTo(diff > 0 ? current + 1 : current - 1); startAuto(); }
+            });
+
+            goTo(0);
+            startAuto();
+        })();
+
+        /* ── Mobile Gallery Dynamic Grid Collage ── */
+        (function() {
+            if (window.innerWidth < 768) {
+                const galleryGrid = document.querySelector('#gallery .grid');
+                if (galleryGrid) {
+                    const items = Array.from(galleryGrid.children);
+                    if (items.length > 0) {
+                        // Shuffle all items
+                        const shuffled = items.sort(() => 0.5 - Math.random());
+                        
+                        // Clear existing children
+                        galleryGrid.innerHTML = '';
+                        
+                        // Set mobile grid container with 6 columns for clean 2, 3, 1 row distribution
+                        galleryGrid.className = "grid grid-cols-6 gap-3 py-2 w-full";
+                        
+                        let tempItems = [...shuffled];
+                        const pattern = [2, 3, 1];
+                        let patternIndex = 0;
+                        
+                        while (tempItems.length > 0) {
+                            let count = pattern[patternIndex % pattern.length];
+                            if (tempItems.length < count) {
+                                count = tempItems.length;
+                            }
+                            
+                            const rowItems = tempItems.splice(0, count);
+                            
+                            if (count === 3) {
+                                rowItems.forEach(el => {
+                                    el.className = "gallery-img col-span-2 aspect-video";
+                                    el.style.display = ''; // Reset display style
+                                    galleryGrid.appendChild(el);
+                                });
+                            } else if (count === 2) {
+                                rowItems.forEach(el => {
+                                    el.className = "gallery-img col-span-3 aspect-video";
+                                    el.style.display = '';
+                                    galleryGrid.appendChild(el);
+                                });
+                            } else if (count === 1) {
+                                rowItems.forEach(el => {
+                                    el.className = "gallery-img col-span-6 aspect-video";
+                                    el.style.display = '';
+                                    galleryGrid.appendChild(el);
+                                });
+                            }
+                            patternIndex++;
+                        }
+                    }
+                }
+            }
+        })();
+
+        /* ── Gallery Lightbox ── */
+        (function() {
+            const lightbox = document.getElementById('gallery-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const closeBtn = document.getElementById('lightbox-close');
+            
+            // Add click listeners via delegation under `#gallery`
+            const gallerySection = document.getElementById('gallery');
+            if (gallerySection) {
+                gallerySection.addEventListener('click', (e) => {
+                    const imgCard = e.target.closest('.gallery-img');
+                    if (!imgCard) return;
+                    
+                    const img = imgCard.querySelector('img');
+                    const overlayText = imgCard.querySelector('.overlay span');
+                    if (!img) return;
+                    
+                    // Set image src, alt and caption text
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt || '';
+                    lightboxCaption.textContent = overlayText ? overlayText.textContent : (img.alt || '');
+                    
+                    // Open Lightbox
+                    lightbox.classList.remove('opacity-0', 'pointer-events-none');
+                    setTimeout(() => {
+                        lightboxImg.classList.remove('scale-95');
+                        lightboxImg.classList.add('scale-100');
+                    }, 50);
+                });
+            }
+            
+            function closeLightbox() {
+                lightboxImg.classList.remove('scale-100');
+                lightboxImg.classList.add('scale-95');
+                lightbox.classList.add('opacity-0', 'pointer-events-none');
+            }
+            
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeLightbox);
+            }
+            if (lightbox) {
+                lightbox.addEventListener('click', (e) => {
+                    if (e.target === lightbox || e.target.closest('button') === closeBtn) {
+                        closeLightbox();
+                    }
+                });
+            }
+            
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && lightbox && !lightbox.classList.contains('opacity-0')) {
+                    closeLightbox();
+                }
+            });
+        })();
+    </script>
+
+    <!-- ── Gallery Lightbox Modal HTML ── -->
+    <div id="gallery-lightbox" class="fixed inset-0 z-[200] bg-slate-950/95 backdrop-blur-md flex flex-col justify-center items-center opacity-0 pointer-events-none transition-all duration-300 ease-out">
+        <!-- Close Button -->
+        <button id="lightbox-close" class="absolute top-6 right-6 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors duration-300">
+            <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+        <!-- Lightbox Content Container -->
+        <div class="relative max-w-[90vw] max-h-[80vh] flex flex-col items-center">
+            <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[75vh] rounded-2xl object-contain shadow-2xl transition-transform duration-300 scale-95" />
+            <p id="lightbox-caption" class="text-white/90 font-headline text-xs md:text-sm font-bold mt-4 tracking-widest uppercase text-center"></p>
+        </div>
+    </div>
+</body>
+</html>
