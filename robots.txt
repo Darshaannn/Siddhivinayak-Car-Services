@@ -1,0 +1,12 @@
+# Robots.txt for Siddhivinayak Car Care
+# Optimized for maximum search visibility and structured crawling
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /Assests/
+Allow: /main.js
+Allow: /styles.css
+
+# Sitemap locator
+Sitemap: https://siddhivinayakcarcare.com/sitemap.xml

@@ -1,20 +1,21 @@
 /* ============================================================
    SIDDHIVINAYAK CAR CARE — PREMIUM AUTOMOTIVE WORKSHOP THEME
-   Design System: Modern Automotive | Tesla Minimalism × Motorsport UI
+   Design System: Modern Automotive | Luxury Grotesque Aesthetic
    ============================================================ */
 
 /* ── CSS Variables ─────────────────────────────────────── */
 :root {
-    --bg-main:        #FFFFFF;   /* Main Background */
-    --bg-surface:     #F8FAFC;   /* Secondary BG: Cards, alt sections */
-    --bg-surface-lt:  #F1F5F9;   /* Soft Surface: hover cards, forms */
-    --red:            #E63946;   /* Performance Red */
-    --red-hover:      #FF4D5A;
-    --blue:           #2563EB;   /* Trust Blue */
-    --text-main:      #0F172A;   /* Headings: Slate 900 */
-    --text-body:      #334155;   /* Paragraph: Slate 700 */
-    --text-muted:     #64748B;   /* Labels / secondary: Slate 500 */
-    --border:         #E2E8F0;   /* Subtle borders: Slate 200 */
+    --bg-main:        #F5F4F0;   /* Light warm cream background */
+    --bg-surface:     #EAE8E4;   /* Light gray-beige surface for cards */
+    --bg-surface-lt:  #FFFFFF;   /* Pure white for overlays, forms */
+    --accent-yellow:  #F1D249;   /* Luxury Gold/Yellow */
+    --accent-yellow-hover: #E8CA3F;
+    --cocoa-black:    #1E1C1A;   /* Deep chocolate/cocoa-black for text/buttons */
+    --text-main:      #1E1C1A;   
+    --text-body:      #2D2B28;   
+    --text-muted:     #6E6C68;   
+    --border:         #D8D6D0;   /* Subtle border matching the warm tone */
+    --footer-bg:      #221A15;   /* Dark cocoa footer */
 }
 
 /* ── Base ───────────────────────────────────────────────── */
@@ -29,19 +30,25 @@ html {
 body {
     background-color: var(--bg-main);
     color: var(--text-body);
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     max-width: 100%;
     overflow-x: hidden;
 }
 
-::selection { background: var(--red); color: #fff; }
+::selection { background: var(--accent-yellow); color: var(--cocoa-black); }
 
 /* ── Typography ─────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'PT Serif', serif;
+    font-family: 'Outfit', sans-serif;
     color: var(--text-main);
+    letter-spacing: -0.02em;
+}
+
+#hero h1 {
+    color: #FFFFFF !important;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
 p { color: var(--text-body); }
@@ -50,11 +57,11 @@ p { color: var(--text-body); }
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg-main); }
 ::-webkit-scrollbar-thumb { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 8px; }
-::-webkit-scrollbar-thumb:hover { background: var(--bg-surface-lt); border-color: var(--blue); }
+::-webkit-scrollbar-thumb:hover { background: var(--border); }
 
 /* ── Glassmorphism ──────────────────────────────────────── */
 .glass {
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(245, 244, 240, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--border);
@@ -62,23 +69,22 @@ p { color: var(--text-body); }
 
 /* ── Outline text effect ────────────────────────────────── */
 .outline-text {
-    -webkit-text-stroke: 1.5px var(--red);
+    -webkit-text-stroke: 1.5px var(--cocoa-black);
     color: transparent;
 }
 
 /* ── Card Design System ─────────────────────────────────── */
 .premium-card {
-    background-color: var(--bg-surface);
+    background-color: var(--bg-surface-lt);
     border: 1px solid var(--border);
-    border-radius: 1.25rem;
+    border-radius: 2rem;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .premium-card:hover {
-    background-color: var(--bg-surface-lt);
-    border-color: var(--blue);
-    transform: translateY(-6px);
-    box-shadow: 0 12px 40px rgba(37, 99, 235, 0.18);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(30, 28, 26, 0.06);
+    border-color: var(--accent-yellow);
 }
 
 .bento-card {
@@ -89,36 +95,34 @@ p { color: var(--text-body); }
 }
 
 .bento-card:hover {
-    background-color: var(--bg-surface-lt);
-    border-color: var(--blue);
     transform: translateY(-5px);
-    box-shadow: 0 16px 50px rgba(37, 99, 235, 0.15);
+    box-shadow: 0 20px 50px rgba(30, 28, 26, 0.08);
 }
 
 .testimonial-card {
-    background-color: var(--bg-surface-lt);
+    background-color: var(--bg-surface);
     border: 1px solid var(--border);
-    border-radius: 2rem;
+    border-radius: 2.5rem;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .testimonial-card:hover {
     background-color: var(--bg-surface-lt);
-    border-color: var(--blue);
+    border-color: var(--border);
     transform: translateY(-5px);
-    box-shadow: 0 12px 35px rgba(37, 99, 235, 0.15);
+    box-shadow: 0 16px 40px rgba(30, 28, 26, 0.06);
 }
 
 /* ── Buttons ────────────────────────────────────────────── */
 .btn-precision {
     position: relative;
     overflow: hidden;
-    background-color: var(--red);
-    color: var(--text-main);
-    box-shadow: 0 4px 20px rgba(230, 57, 70, 0.35);
+    background-color: var(--accent-yellow);
+    color: var(--cocoa-black);
+    box-shadow: 0 4px 20px rgba(241, 210, 73, 0.25);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    border: 1px solid rgba(255,255,255,0.1);
-    font-family: 'Roboto Slab', serif;
+    border: none;
+    font-family: 'Outfit', sans-serif;
     font-weight: 700;
 }
 
@@ -127,14 +131,14 @@ p { color: var(--text-body); }
     position: absolute;
     inset: 0;
     left: -100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
     transition: left 0.6s ease;
 }
 
 .btn-precision:hover {
-    background-color: var(--red-hover);
+    background-color: var(--accent-yellow-hover);
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(230, 57, 70, 0.55);
+    box-shadow: 0 8px 30px rgba(241, 210, 73, 0.45);
 }
 
 .btn-precision:hover::before { left: 100%; }
@@ -142,18 +146,18 @@ p { color: var(--text-body); }
 
 .btn-secondary-custom {
     background-color: transparent;
-    border: 1.5px solid var(--blue);
-    color: var(--blue);
-    font-family: 'Roboto Slab', serif;
+    border: 1.5px solid var(--cocoa-black);
+    color: var(--cocoa-black);
+    font-family: 'Outfit', sans-serif;
     font-weight: 700;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-secondary-custom:hover {
-    background-color: var(--blue);
-    color: var(--text-main);
+    background-color: var(--cocoa-black);
+    color: #FFFFFF;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+    box-shadow: 0 6px 20px rgba(30, 28, 26, 0.15);
 }
 
 .btn-secondary-custom:active { transform: translateY(0); }
@@ -171,7 +175,7 @@ header nav a::after {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--red);
+    background: var(--accent-yellow);
     transition: width 0.4s ease;
 }
 

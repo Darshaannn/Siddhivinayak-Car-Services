@@ -17,7 +17,7 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
     
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
@@ -33,18 +33,18 @@
             theme: {
                 extend: {
                     colors: {
-                        "background":   "#FFFFFF",
-                        "surface":      "#F8FAFC",
-                        "surface-light":"#F1F5F9",
-                        "primary":      "#E63946",
-                        "secondary":    "#2563EB",
-                        "on-surface":   "#334155",
-                        "muted":        "#64748B",
-                        "outline":      "#E2E8F0"
+                        "background":   "#F5F4F0",
+                        "surface":      "#EAE8E4",
+                        "surface-light":"#FFFFFF",
+                        "primary":      "#F1D249",
+                        "secondary":    "#1E1C1A",
+                        "on-surface":   "#1E1C1A",
+                        "muted":        "#6E6C68",
+                        "outline":      "#D8D6D0"
                     },
                     fontFamily: {
-                        "headline": ["PT Serif", "serif"],
-                        "body":     ["Roboto Slab", "serif"]
+                        "headline": ["Outfit", "sans-serif"],
+                        "body":     ["Plus Jakarta Sans", "sans-serif"]
                     }
                 }
             }
@@ -59,178 +59,136 @@
     <!-- ═══════════════════════════════════════════════════
          HEADER & NAVIGATION
     ════════════════════════════════════════════════════ -->
-    <header id="main-header" class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-outline transition-all duration-500 py-3">
-        <nav class="flex justify-between items-center px-4 md:px-6 max-w-7xl mx-auto">
-            <a href="#hero" class="text-base sm:text-2xl md:text-4xl lg:text-5xl font-headline font-black tracking-tight text-slate-900 uppercase hover:text-primary transition-colors whitespace-nowrap">
-                Siddhivinayaka <span class="text-primary font-light italic">Car Care</span>
+    <header id="main-header" class="fixed top-0 w-full z-50 bg-background/85 backdrop-blur-xl border-b border-outline transition-all duration-500 py-4">
+        <nav class="flex justify-between items-center px-6 md:px-12 max-w-7xl mx-auto">
+            <!-- Logo -->
+            <a href="#hero" class="text-lg md:text-xl font-headline font-black tracking-[0.15em] text-secondary uppercase whitespace-nowrap">
+                SIDDHIVINAYAK <span class="text-muted font-light">CAR CARE</span>
             </a>
             
-            <div class="flex items-center gap-2 md:gap-4">
-                <!-- Mobile Quick Call Button -->
-                <a href="tel:+919970745411" class="md:hidden flex w-9 h-9 items-center justify-center bg-primary text-white rounded-full transition-transform active:scale-90 hover:scale-105 shadow-md shadow-primary/25">
-                    <span class="material-symbols-outlined text-lg">phone</span>
+            <!-- Desktop Navigation Links (matching mockup style) -->
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="#about" class="text-[10px] font-headline font-bold tracking-[0.2em] text-secondary uppercase hover:text-muted transition-colors">About</a>
+                <a href="#services" class="text-[10px] font-headline font-bold tracking-[0.2em] text-secondary uppercase hover:text-muted transition-colors">Services</a>
+                <a href="#gallery" class="text-[10px] font-headline font-bold tracking-[0.2em] text-secondary uppercase hover:text-muted transition-colors">Gallery</a>
+            </div>
+
+            <!-- Call & Action -->
+            <div class="flex items-center gap-3 md:gap-6">
+                <a href="tel:+919970745411" class="flex items-center gap-2 text-secondary hover:text-muted transition-colors text-xs md:text-sm font-headline tracking-widest font-bold">
+                    <span class="material-symbols-outlined text-base animate-pulse">phone</span>
+                    <span class="hidden sm:inline">+91 99707 45411</span>
                 </a>
-                <!-- Desktop Direct Call -->
-                <a href="tel:+919970745411" class="hidden md:flex items-center gap-3 text-slate-900 hover:text-primary transition-colors text-lg md:text-2xl font-headline tracking-wider font-bold">
-                    <span class="material-symbols-outlined text-xl text-primary animate-pulse">phone</span>+91 99707 45411
+                
+                <!-- Sleek Call Action Button -->
+                <a href="#booking" class="bg-secondary text-white text-[9px] font-headline font-bold tracking-[0.25em] uppercase py-2.5 px-5 rounded-full hover:bg-muted transition-colors hidden sm:block">
+                    BOOK NOW
                 </a>
             </div>
         </nav>
     </header>
 
     <main>
+        <section id="hero" class="relative overflow-hidden bg-secondary" style="height: 100vh; height: 100dvh;">
+            
+            <!-- ── FULL-SCREEN BACKGROUND SLIDER ── -->
+            <div class="absolute inset-0 z-0 overflow-hidden" id="hero-slider-container">
+                <!-- Slide 1 -->
+                <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100">
+                    <img src="Assests/hero slider (1).jpeg" class="w-full h-full object-cover" style="filter: brightness(0.62) contrast(1.05);" alt="Siddhivinayak Car Care Premium Services">
+                </div>
+                <!-- Slide 2 -->
+                <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+                    <img src="Assests/hero slider (2).jpeg" class="w-full h-full object-cover" style="filter: brightness(0.62) contrast(1.05);" alt="Precision Engine Care">
+                </div>
+                <!-- Slide 3 -->
+                <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+                    <img src="Assests/hero slider (3).jpeg" class="w-full h-full object-cover" style="filter: brightness(0.62) contrast(1.05);" alt="Premium Diagnostics Lab">
+                </div>
+                <!-- Slide 4 -->
+                <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+                    <img src="Assests/hero slider (4).jpeg" class="w-full h-full object-cover" style="filter: brightness(0.62) contrast(1.05);" alt="Luxury Automotive Detailing">
+                </div>
 
-        <!-- ═══════════════════════════════════════════════════
-             1. HERO — SINGLE CINEMATIC IMAGE + HERO TEXT
-        ════════════════════════════════════════════════════ -->
-        <section id="hero" class="relative pt-24 md:pt-28 pb-10 bg-background">
-            <div class="max-w-7xl mx-auto px-6">
-                <!-- Garage Image Container -->
-                <div class="relative w-full rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-outline shadow-2xl" style="height: clamp(240px, 48vw, 560px);">
-                    <!-- Slides wrapper -->
-                    <div id="heroSlides" class="flex w-full h-full transition-transform duration-700 ease-in-out">
-                        <!-- Slide 1 -->
-                        <div class="w-full h-full shrink-0 relative">
-                            <img src="Assests/Hero bg (1).jpeg"
-                                 alt="Siddhivinayaka Car Care Premium Garage Chikhali"
-                                 class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/45"></div>
-                        </div>
-                        <!-- Slide 2 -->
-                        <div class="w-full h-full shrink-0 relative">
-                            <img src="Assests/Hero bg (2).jpeg"
-                                 alt="Siddhivinayaka Car Care Premium Diagnostics"
-                                 class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/45"></div>
-                        </div>
-                        <!-- Slide 3 -->
-                        <div class="w-full h-full shrink-0 relative">
-                            <img src="Assests/Hero bg (3).jpeg"
-                                 alt="Siddhivinayaka Car Care Premium Workshop PCMC"
-                                 class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/45"></div>
-                        </div>
-                        <!-- Slide 4 -->
-                        <div class="w-full h-full shrink-0 relative">
-                            <img src="Assests/Hero bg (1).jfif"
-                                 alt="Siddhivinayaka Car Care Premium Services Lounge"
-                                 class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/45"></div>
-                        </div>
-                        <!-- Slide 5 -->
-                        <div class="w-full h-full shrink-0 relative">
-                            <img src="Assests/Hero bg (2).jfif"
-                                 alt="Siddhivinayaka Car Care Clinical Diagnostics Lab"
-                                 class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/45"></div>
-                        </div>
-                        <!-- Slide 6 -->
-                        <div class="w-full h-full shrink-0 relative">
-                            <img src="Assests/Hero bg (3).jfif"
-                                 alt="Siddhivinayaka Car Care Motorsport Workshop"
-                                 class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/45"></div>
-                        </div>
+                <!-- Gradient overlays for maximum legibility of white content text -->
+                <div class="absolute bottom-0 left-0 right-0 h-2/3" style="background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);"></div>
+                <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.3) 0%, transparent 55%);"></div>
+            </div>
+
+            <!-- ── HERO CONTENT — bottom-left anchored ── -->
+            <div class="absolute inset-0 z-10 flex flex-col justify-end px-6 sm:px-12 md:px-16 pb-10 sm:pb-12 md:pb-12">
+
+                <!-- Location pill -->
+                <div class="inline-flex items-center gap-2 mb-2 self-start">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#F1D249] animate-pulse"></span>
+                    <span class="text-white/70 text-[9px] font-bold uppercase tracking-[0.28em] font-headline">Chikhali · Talawade · PCMC, Pune</span>
+                </div>
+
+                <!-- Main Headline -->
+                <h1 class="font-headline leading-[1.05] sm:leading-[0.92] tracking-tight text-white mb-2 sm:mb-3 text-[1.8rem] sm:text-[3.8rem] md:text-[5.5rem]"
+                    style="text-shadow: 0 8px 40px rgba(0,0,0,0.4); font-weight: 900;">
+                    <span class="uppercase">THE ART</span><br>
+                    <span class="block sm:inline" style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-style: normal; -webkit-text-stroke: 1.2px rgba(255,255,255,0.85); color: transparent; letter-spacing: 0.05em; text-transform: none; font-size: 0.95em;">of Automotive</span><br class="hidden sm:inline">
+                    <span class="uppercase">CARE.</span>
+                </h1>
+
+                <!-- Divider line -->
+                <div class="w-12 h-[2px] bg-[#F1D249] mb-2"></div>
+
+                <!-- Tagline -->
+                <p class="text-white/70 text-xs sm:text-sm font-light leading-relaxed max-w-md mb-4 font-body">
+                    Premium diagnostics, precision repairs &amp; luxury detailing — all under one roof, crafted for perfection.
+                </p>
+
+                <!-- CTA Row -->
+                <div class="flex items-center gap-4 mb-4">
+                    <a href="#booking" 
+                       class="inline-flex items-center gap-2.5 bg-[#F1D249] text-[#1E1C1A] font-headline font-bold text-[9px] sm:text-[10px] uppercase tracking-[0.25em] px-5 sm:px-6 py-2.5 sm:py-3 rounded-full transition-all duration-300 hover:bg-white hover:scale-105 active:scale-95 shadow-lg">
+                        Book a Slot
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#services"
+                       class="group text-white text-[9px] sm:text-[10px] font-headline font-bold uppercase tracking-[0.25em] inline-flex items-center gap-2.5 hover:text-[#F1D249] transition-colors duration-300">
+                        Our Services
+                        <span class="h-[1px] w-5 sm:w-7 bg-white group-hover:w-12 group-hover:bg-[#F1D249] transition-all duration-400"></span>
+                    </a>
+                </div>
+
+                <!-- Stats strip -->
+                <div class="grid grid-cols-2 sm:flex sm:flex-wrap gap-x-6 gap-y-3 sm:gap-6 pt-4 border-t border-white/15">
+                    <div>
+                        <div class="text-white font-headline font-black text-lg sm:text-2xl">500+</div>
+                        <div class="text-white/50 text-[8px] sm:text-[9px] uppercase tracking-widest font-body">Happy Customers</div>
                     </div>
-
-                    <!-- Open status badge -->
-                    <div class="absolute top-5 left-5 z-25 flex items-center gap-2 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
-                        <span class="w-2 h-2 rounded-full bg-green-400 animate-ping absolute"></span>
-                        <span class="w-2 h-2 rounded-full bg-green-400"></span>
-                        <span class="text-white text-[10px] font-headline font-semibold uppercase tracking-wider ml-1">Open Now · Mon–Sun 9AM–8PM</span>
+                    <div>
+                        <div class="text-white font-headline font-black text-lg sm:text-2xl">10+</div>
+                        <div class="text-white/50 text-[8px] sm:text-[9px] uppercase tracking-widest font-body">Years Experience</div>
                     </div>
-
-                    <!-- Slider Controls (Chevron buttons) -->
-                    <button id="sliderPrev" class="absolute left-4 top-1/2 -translate-y-1/2 z-25 w-10 h-10 rounded-full bg-black/40 hover:bg-black/60 border border-white/10 flex items-center justify-center text-white transition-all active:scale-90 hover:scale-105">
-                        <span class="material-symbols-outlined text-lg">chevron_left</span>
-                    </button>
-                    <button id="sliderNext" class="absolute right-4 top-1/2 -translate-y-1/2 z-25 w-10 h-10 rounded-full bg-black/40 hover:bg-black/60 border border-white/10 flex items-center justify-center text-white transition-all active:scale-90 hover:scale-105">
-                        <span class="material-symbols-outlined text-lg">chevron_right</span>
-                    </button>
-
-                    <!-- Slider Dots -->
-                    <div class="absolute bottom-5 left-1/2 -translate-x-1/2 z-25 flex gap-2">
-                        <button class="slider-dot w-5 h-2 rounded-full bg-white transition-all duration-300" data-index="0"></button>
-                        <button class="slider-dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300" data-index="1"></button>
-                        <button class="slider-dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300" data-index="2"></button>
-                        <button class="slider-dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300" data-index="3"></button>
-                        <button class="slider-dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300" data-index="4"></button>
-                        <button class="slider-dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300" data-index="5"></button>
+                    <div>
+                        <div class="text-white font-headline font-black text-lg sm:text-2xl">30+</div>
+                        <div class="text-white/50 text-[8px] sm:text-[9px] uppercase tracking-widest font-body">Services Offered</div>
+                    </div>
+                    <div>
+                        <div class="text-white font-headline font-black text-lg sm:text-2xl">15+</div>
+                        <div class="text-white/50 text-[8px] sm:text-[9px] uppercase tracking-widest font-body">Car Brands</div>
                     </div>
                 </div>
             </div>
 
-            <!-- ── HERO TEXT BLOCK ── -->
-            <div class="bg-background">
-                <div class="max-w-5xl mx-auto px-6 py-12 text-center">
-
-                    <!-- Location tag -->
-                    <div class="inline-flex items-center gap-2 text-[10px] font-headline font-semibold text-muted uppercase tracking-widest mb-5">
-                        <span class="material-symbols-outlined text-primary text-sm">location_on</span>
-                        MQPQ+6GC, Chikhali · Talawade · Pimpri-Chinchwad, Maharashtra
-                    </div>
-
-                    <!-- Main Headline -->
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-headline font-black text-slate-900 uppercase leading-tight mb-4">
-                        Car Service &amp; Repair<br>
-                        <span class="text-primary font-bold">in Chikhali, Pune</span>
-                    </h1>
-
-                    <!-- Interactive Counter Stats -->
-                    <div class="grid grid-cols-3 max-w-4xl mx-auto my-10 bg-slate-950 border border-slate-800/80 rounded-[1.5rem] md:rounded-[2rem] shadow-2xl reveal-up opacity-0 overflow-hidden divide-x divide-slate-800">
-                        <!-- Stat 1 -->
-                        <div class="flex flex-col items-center py-5 px-2 md:py-8 md:px-6">
-                            <span class="text-xl sm:text-2xl md:text-5xl font-headline font-black text-white flex items-center justify-center">
-                                <span data-target="5000" class="tabular-nums">0</span>+
-                            </span>
-                            <span class="text-[8px] sm:text-[10px] md:text-xs font-headline font-semibold text-slate-400 uppercase tracking-widest mt-2 text-center leading-tight">Happy Owners</span>
-                        </div>
-                        <!-- Stat 2 -->
-                        <div class="flex flex-col items-center py-5 px-2 md:py-8 md:px-6">
-                            <span class="text-xl sm:text-2xl md:text-5xl font-headline font-black text-primary flex items-center justify-center">
-                                <span data-target="15000" class="tabular-nums">0</span>+
-                            </span>
-                            <span class="text-[8px] sm:text-[10px] md:text-xs font-headline font-semibold text-slate-400 uppercase tracking-widest mt-2 text-center leading-tight">Cars Serviced</span>
-                        </div>
-                        <!-- Stat 3 -->
-                        <div class="flex flex-col items-center py-5 px-2 md:py-8 md:px-6">
-                            <span class="text-xl sm:text-2xl md:text-5xl font-headline font-black text-white flex items-center justify-center">
-                                <span data-target="99" class="tabular-nums">0</span>%
-                            </span>
-                            <span class="text-[8px] sm:text-[10px] md:text-xs font-headline font-semibold text-slate-400 uppercase tracking-widest mt-2 text-center leading-tight">Satisfaction</span>
-                        </div>
-                    </div>
-
-                    <!-- Subtext — what customers search for -->
-                    <p class="text-slate-700 text-base md:text-lg font-body font-light max-w-2xl mx-auto mb-3 leading-relaxed">
-                        Trusted multibrand garage for <strong class="text-slate-900 font-semibold">car service, denting &amp; painting, AC repair, wheel alignment, oil change, engine diagnostics</strong> and ceramic coating — all brands, all models.
-                    </p>
-                    <p class="text-muted text-sm mb-9">
-                        BMW · Audi · Mercedes · Toyota · Honda · Hyundai · Kia · Mahindra · Tata · Maruti Suzuki · Volkswagen
-                    </p>
-
-                    <!-- CTAs -->
-                    <div class="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-4 max-w-md mx-auto md:max-w-none">
-                        <!-- Row 1: Book & Call (side by side on mobile, inline on desktop) -->
-                        <div class="flex flex-row w-full md:w-auto gap-3 md:gap-4">
-                            <a href="#booking"
-                               class="btn-precision text-white flex-1 md:flex-none text-center justify-center py-4 px-4 sm:px-8 rounded-full font-headline font-bold text-[11px] sm:text-sm tracking-widest flex items-center gap-2 group whitespace-nowrap">
-                                Book slot
-                                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
-                            </a>
-                            <a href="tel:+919970745411"
-                               class="btn-secondary-custom flex-1 md:flex-none text-center justify-center py-4 px-4 sm:px-8 rounded-full font-headline font-semibold text-[11px] sm:text-sm tracking-widest flex items-center gap-2 whitespace-nowrap">
-                                <span class="material-symbols-outlined text-sm">phone</span>Call Now
-                            </a>
-                        </div>
-                        <!-- Row 2: WhatsApp (full width on mobile, inline on desktop) -->
-                        <a href="https://wa.me/919970745411?text=Hi%20Siddhivinayak%20Car%20Care%2C%20I%27d%20like%20to%20book%20a%20service."
-                           target="_blank" rel="noopener"
-                           class="w-full md:w-auto text-center justify-center py-4 px-8 rounded-full bg-[#25D366] hover:bg-[#1ebe5a] text-white font-headline font-bold text-[11px] sm:text-sm tracking-widest flex items-center gap-2 transition-all hover:-translate-y-0.5 shadow-lg shadow-green-600/10 whitespace-nowrap">
-                            <span class="material-symbols-outlined text-sm">chat</span>WhatsApp
-                        </a>
-                    </div>
+            <!-- Scroll indicator -->
+            <div class="absolute bottom-8 right-8 z-20 flex flex-col items-center gap-2 text-white/40">
+                <span class="text-[9px] uppercase tracking-[0.3em] font-headline" style="writing-mode: vertical-rl;">Scroll</span>
+                <div class="w-[1px] h-10 bg-white/30 relative overflow-hidden">
+                    <div class="absolute top-0 w-full bg-white/80 animate-scroll-line" style="height: 40%; animation: scrollLine 1.8s ease-in-out infinite;"></div>
                 </div>
+            </div>
+
+            <!-- JS compatibility stubs -->
+            <div class="hidden" id="heroSlides"><div class="w-full h-full shrink-0"></div></div>
+            <div class="hidden">
+                <button id="sliderPrev"></button>
+                <button id="sliderNext"></button>
+                <button class="slider-dot" data-index="0"></button>
             </div>
         </section>
 
@@ -241,7 +199,7 @@
 
         <section id="brands" class="py-10 px-6 bg-surface border-y border-outline">
             <div class="max-w-7xl mx-auto text-center mb-6">
-                <h2 class="text-3xl md:text-5xl font-headline font-bold text-slate-900 uppercase tracking-wide">
+                <h2 class="text-3xl md:text-5xl font-headline font-bold text-secondary uppercase tracking-wide">
                     Brands WE WORK ON
                 </h2>
             </div>
@@ -409,177 +367,393 @@
             <p class="text-center text-muted text-[10px] font-light mt-10 tracking-wider">And many more — if it runs on four wheels, we've got it covered.</p>
         </section>
 
-
         <!-- ═══════════════════════════════════════════════════
-             3. SERVICES SECTION
+             SECTION 01: OUR SERVICES
         ════════════════════════════════════════════════════ -->
-        <section id="services" class="py-12 px-6 bg-surface border-t border-outline">
+        <section id="services" class="pt-28 pb-20 px-6 md:px-12 bg-background border-t border-outline relative scroll-mt-20">
             <div class="max-w-7xl mx-auto">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
-                    <div class="reveal-up opacity-0">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4 text-[9px] text-primary tracking-widest uppercase font-bold font-headline">
-                            <span class="material-symbols-outlined text-xs">build</span>OUR WORK BENCH
+                
+                <!-- Section Header (Mockup style) -->
+                <div class="flex items-center gap-6 mb-16 select-none">
+                    <span class="text-secondary/15 text-7xl md:text-9xl font-headline font-black leading-none">01</span>
+                    <h2 class="text-4xl md:text-6xl font-headline font-black text-secondary uppercase tracking-tight">Our services</h2>
+                </div>
+
+                <!-- Three Premium Service Cards (Mockup style) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                    
+                    <!-- Card 1: Maintenance -->
+                    <div class="relative h-[380px] rounded-[2rem] overflow-hidden group cursor-pointer border border-outline shadow-md">
+                        <div class="absolute inset-0">
+                            <img src="Assests/5954b96c-86a1-486c-a92c-9de9e0a294dd.jfif" alt="Mechanical Repairs SVCC" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s]">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
                         </div>
-                        <h2 class="text-5xl md:text-7xl font-headline font-light text-slate-900 uppercase leading-none">
-                            Our <span class="text-primary italic">Services</span>
-                        </h2>
+                        
+                        <!-- Badge Top Left -->
+                        <div class="absolute top-5 left-5 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full border border-outline">
+                            <span class="text-secondary text-[9px] font-headline font-bold uppercase tracking-wider">Scheduled Maintenance</span>
+                        </div>
+
+                        <!-- Card Content Bottom -->
+                        <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                            <div class="text-left text-white">
+                                <span class="text-[9px] font-headline font-bold uppercase tracking-widest text-primary">Explore More</span>
+                                <h3 class="text-xl font-headline font-bold uppercase leading-none mt-1">General repairs</h3>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-secondary shadow-md group-hover:bg-primary transition-colors">
+                                <span class="material-symbols-outlined text-sm">arrow_outward</span>
+                            </div>
+                        </div>
                     </div>
-                    <p class="reveal-up opacity-0 text-on-surface max-w-md text-sm md:text-base font-light leading-relaxed">
-                        Comprehensive mechanical diagnostics, bespoke aesthetic restorations, and multi-point calibration protocols handled by certified engineers.
+
+                    <!-- Card 2: Diagnostics -->
+                    <div class="relative h-[380px] rounded-[2rem] overflow-hidden group cursor-pointer border border-outline shadow-md">
+                        <div class="absolute inset-0">
+                            <img src="Assests/Hero bg (2).jfif" alt="Computerized OBD Diagnostics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s]">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+                        </div>
+                        
+                        <!-- Badge Top Left -->
+                        <div class="absolute top-5 left-5 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full border border-outline">
+                            <span class="text-secondary text-[9px] font-headline font-bold uppercase tracking-wider">OBD diagnostics</span>
+                        </div>
+
+                        <!-- Card Content Bottom -->
+                        <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                            <div class="text-left text-white">
+                                <span class="text-[9px] font-headline font-bold uppercase tracking-widest text-primary">Explore More</span>
+                                <h3 class="text-xl font-headline font-bold uppercase leading-none mt-1">Engine Tuning</h3>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-secondary shadow-md group-hover:bg-primary transition-colors">
+                                <span class="material-symbols-outlined text-sm">arrow_outward</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Cosmetics -->
+                    <div class="relative h-[380px] rounded-[2rem] overflow-hidden group cursor-pointer border border-outline shadow-md">
+                        <div class="absolute inset-0">
+                            <img src="Assests/62ab1b96-9f09-4ced-8486-7bc7e23343be.jfif" alt="Denting Painting Restoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s]">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+                        </div>
+                        
+                        <!-- Badge Top Left -->
+                        <div class="absolute top-5 left-5 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full border border-outline">
+                            <span class="text-secondary text-[9px] font-headline font-bold uppercase tracking-wider">Cosmetics Lab</span>
+                        </div>
+
+                        <!-- Card Content Bottom -->
+                        <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                            <div class="text-left text-white">
+                                <span class="text-[9px] font-headline font-bold uppercase tracking-widest text-primary">Explore More</span>
+                                <h3 class="text-xl font-headline font-bold uppercase leading-none mt-1">Denting & Painting</h3>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-secondary shadow-md group-hover:bg-primary transition-colors">
+                                <span class="material-symbols-outlined text-sm">arrow_outward</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Mockup Lower Text Block -->
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <p class="text-secondary text-base md:text-xl font-body font-light leading-relaxed mb-8">
+                        Whether you're visiting for routine scheduled maintenance, high-precision computer engine diagnostics, or premium showroom denting and painting, our certified automotive engineers ensure your vehicle performs in absolute style, comfort, and safety.
                     </p>
+                    <a href="#booking" class="bg-primary hover:bg-secondary hover:text-white text-secondary text-[10px] font-headline font-bold tracking-[0.25em] uppercase px-8 py-4 rounded-full transition-all duration-300 inline-flex items-center gap-2">
+                        Explore More
+                    </a>
                 </div>
 
-                <!-- Bento Hero Cards -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-8">
-                    <!-- Wide Feature Card -->
-                    <div class="lg:col-span-8 bento-card overflow-hidden p-10 md:p-12 flex flex-col justify-between group cursor-pointer relative min-h-[380px]">
-                        <div class="absolute inset-0 z-0">
-                            <img alt="Premium Car Servicing Siddhivinayak" class="w-full h-full object-cover opacity-[0.85] group-hover:scale-105 transition-transform duration-1000" src="Assests/5954b96c-86a1-486c-a92c-9de9e0a294dd.jfif" />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
-                        </div>
-                        <div class="relative z-10 flex justify-between items-start">
-                            <div>
-                                <span class="text-[9px] uppercase tracking-widest font-bold text-primary mb-2 flex items-center gap-1.5 font-headline">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>BENCHMARK MAINTENANCE
-                                </span>
-                                <h3 class="text-3xl md:text-5xl font-headline font-light text-white uppercase leading-none">Premium Car<br/>Servicing</h3>
-                            </div>
-                            <div class="text-right">
-                                <div class="text-white font-headline text-xs uppercase tracking-widest font-semibold bg-white/10 px-3 py-1 rounded-full border border-white/20">Full 40-Point Suite</div>
-                            </div>
-                        </div>
-                        <div class="relative z-10 mt-8 max-w-md">
-                            <p class="text-sm text-slate-200 font-light leading-relaxed">Engine tuning, fluid dynamics review, exhaust analysis, oil replacements, and computerized parameters check.</p>
-                        </div>
+                <!-- Secondary Detailed Service Tiles Grid -->
+                <div class="border-t border-outline pt-16">
+                    <div class="text-left mb-8">
+                        <span class="text-[9px] uppercase tracking-[0.2em] font-headline font-bold text-muted">COMPREHENSIVE SYSTEMS</span>
+                        <h4 class="text-xl font-headline font-bold text-secondary uppercase tracking-tight">Technical Service Index</h4>
                     </div>
-
-                    <!-- Detailing Card -->
-                    <div class="lg:col-span-4 bento-card overflow-hidden p-10 group relative cursor-pointer flex flex-col justify-between min-h-[380px]">
-                        <div class="absolute inset-0 z-0">
-                            <img alt="Car Detailing Mirror Finish" class="w-full h-full object-cover opacity-[0.85] group-hover:scale-105 transition-transform duration-1000" src="Assests/62ab1b96-9f09-4ced-8486-7bc7e23343be.jfif" />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
-                        </div>
-                        <div class="relative z-10 flex flex-col justify-between h-full">
-                            <span class="material-symbols-outlined text-primary text-5xl mb-8">health_metrics</span>
-                            <div>
-                                <span class="text-[9px] uppercase tracking-[0.2em] font-bold text-slate-300 mb-2 block font-headline">BEST FOR SHOWROOM GLOW</span>
-                                <h4 class="text-2xl md:text-3xl font-headline font-light mb-3 text-white uppercase">Car Wash &amp; Detailing</h4>
-                                <p class="text-xs text-slate-200 font-light leading-relaxed">Decontamination, deep interior sanitization, premium wax coat, and advanced polish for a perfect mirror finish.</p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4">
+                        <!-- General Service -->
+                        <div class="premium-card p-6 group cursor-pointer flex flex-col items-center justify-center text-center transition-all duration-300">
+                            <div class="w-14 h-14 flex items-center justify-center mb-2">
+                                <svg class="w-14 h-14" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="18" cy="46" rx="8" ry="3" fill="#EAE8E4"/>
+                                    <ellipse cx="46" cy="46" rx="8" ry="3" fill="#EAE8E4"/>
+                                    <path d="M10 38C10 35 12 32 16 32H48C52 32 54 35 54 38V44H10V38Z" fill="#E32626"/>
+                                    <path d="M14 32L19 23C20 21 22 20 25 20H39C42 20 44 21 45 23L50 32H14Z" fill="#1E1C1A"/>
+                                    <path d="M25 22H39L43 30H21L25 22Z" fill="white" opacity="0.9"/>
+                                    <line x1="32" y1="20" x2="32" y2="32" stroke="#1E1C1A" stroke-width="1.5"/>
+                                    <circle cx="18" cy="44" r="7" fill="#1E1C1A"/>
+                                    <circle cx="18" cy="44" r="3" fill="white"/>
+                                    <circle cx="46" cy="44" r="7" fill="#1E1C1A"/>
+                                    <circle cx="46" cy="44" r="3" fill="white"/>
+                                    <rect x="22" y="6" width="20" height="20" rx="3" fill="white" stroke="#1E1C1A" stroke-width="2"/>
+                                    <rect x="22" y="6" width="20" height="5" fill="#E32626"/>
+                                    <rect x="26" y="3" width="2" height="5" rx="1" fill="#1E1C1A"/>
+                                    <rect x="36" y="3" width="2" height="5" rx="1" fill="#1E1C1A"/>
+                                    <circle cx="27" cy="16" r="1" fill="#1E1C1A"/>
+                                    <circle cx="32" cy="16" r="1" fill="#1E1C1A"/>
+                                    <circle cx="37" cy="16" r="1" fill="#1E1C1A"/>
+                                    <circle cx="27" cy="21" r="1" fill="#1E1C1A"/>
+                                    <circle cx="32" cy="21" r="1" fill="#E32626"/>
+                                    <circle cx="37" cy="21" r="1" fill="#1E1C1A"/>
+                                </svg>
                             </div>
+                            <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider group-hover:text-[#E32626] transition-colors mt-2">General Service</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light font-body">Engine health &amp; fluid top-ups</p>
+                        </div>
+
+                        <!-- Engine Diagnostics -->
+                        <div class="premium-card p-6 group cursor-pointer flex flex-col items-center justify-center text-center transition-all duration-300">
+                            <div class="w-14 h-14 flex items-center justify-center mb-2">
+                                <svg class="w-14 h-14" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 40C8 37 10 34 14 34H42C46 34 48 37 48 40V46H8V40Z" fill="#E32626"/>
+                                    <path d="M12 34L17 25C18 23 20 22 23 22H37C40 22 42 23 43 25L48 34H12Z" fill="#1E1C1A"/>
+                                    <circle cx="16" cy="46" r="6" fill="#1E1C1A"/>
+                                    <circle cx="16" cy="46" r="2.5" fill="white"/>
+                                    <circle cx="40" cy="46" r="6" fill="#1E1C1A"/>
+                                    <circle cx="40" cy="46" r="2.5" fill="white"/>
+                                    <rect x="34" y="6" width="22" height="26" rx="3" fill="white" stroke="#1E1C1A" stroke-width="2"/>
+                                    <rect x="41" y="4" width="8" height="4" rx="1" fill="#E32626" stroke="#1E1C1A" stroke-width="1.5"/>
+                                    <line x1="39" y1="14" x2="51" y2="14" stroke="#1E1C1A" stroke-width="1.5"/>
+                                    <line x1="39" y1="19" x2="47" y2="19" stroke="#1E1C1A" stroke-width="1.5"/>
+                                    <line x1="39" y1="24" x2="49" y2="24" stroke="#1E1C1A" stroke-width="1.5"/>
+                                    <path d="M49 18L51 20L54 16" stroke="#E32626" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider group-hover:text-[#E32626] transition-colors mt-2">Engine Diagnostics</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light font-body">Advanced OBD scans</p>
+                        </div>
+
+                        <!-- Oil Change -->
+                        <div class="premium-card p-6 group cursor-pointer flex flex-col items-center justify-center text-center transition-all duration-300">
+                            <div class="w-14 h-14 flex items-center justify-center mb-2">
+                                <svg class="w-14 h-14" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="22" y="24" width="24" height="26" rx="4" fill="#1E1C1A" stroke="#1E1C1A" stroke-width="2"/>
+                                    <rect x="25" y="27" width="18" height="20" rx="2" fill="white"/>
+                                    <path d="M28 32H40V42H28V32Z" fill="#E32626"/>
+                                    <path d="M24 28L12 18C10 16.5 11 14 13 14L16 14C18 14 20 15 21 16.5L26 24" stroke="#1E1C1A" stroke-width="3" stroke-linecap="round"/>
+                                    <path d="M46 28C50 28 53 31 53 35V43C53 47 50 50 46 50" stroke="#1E1C1A" stroke-width="3" stroke-linecap="round"/>
+                                    <path d="M10 24C10 24 6 29 6 32C6 34.2 7.8 36 10 36C12.2 36 14 34.2 14 32C14 29 10 24 10 24Z" fill="#E32626"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider group-hover:text-[#E32626] transition-colors mt-2">Oil Change</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light font-body">Synthetic lube change</p>
+                        </div>
+
+                        <!-- Brake Repair -->
+                        <div class="premium-card p-6 group cursor-pointer flex flex-col items-center justify-center text-center transition-all duration-300">
+                            <div class="w-14 h-14 flex items-center justify-center mb-2">
+                                <svg class="w-14 h-14" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="32" cy="32" r="22" fill="white" stroke="#1E1C1A" stroke-width="2.5"/>
+                                    <circle cx="32" cy="32" r="14" fill="white" stroke="#1E1C1A" stroke-width="1.5" stroke-dasharray="4,4"/>
+                                    <circle cx="32" cy="32" r="6" fill="#1E1C1A"/>
+                                    <circle cx="32" cy="32" r="2" fill="white"/>
+                                    <circle cx="23" cy="26" r="1" fill="#1E1C1A"/>
+                                    <circle cx="26" cy="20" r="1" fill="#1E1C1A"/>
+                                    <circle cx="38" cy="20" r="1" fill="#1E1C1A"/>
+                                    <circle cx="41" cy="26" r="1" fill="#1E1C1A"/>
+                                    <circle cx="41" cy="38" r="1" fill="#1E1C1A"/>
+                                    <circle cx="38" cy="44" r="1" fill="#1E1C1A"/>
+                                    <circle cx="26" cy="44" r="1" fill="#1E1C1A"/>
+                                    <circle cx="23" cy="38" r="1" fill="#1E1C1A"/>
+                                    <path d="M12 24C14 18 19 13 26 11L28 17C23 19 20 22 18 26L12 24Z" fill="#E32626" stroke="#1E1C1A" stroke-width="2"/>
+                                    <path d="M10 28C10 25 12 22 15 22L17 28H10Z" fill="#1E1C1A"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider group-hover:text-[#E32626] transition-colors mt-2">Brake Repair</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light font-body">Pad &amp; rotor calibration</p>
+                        </div>
+
+                        <!-- AC Service -->
+                        <div class="premium-card p-6 group cursor-pointer flex flex-col items-center justify-center text-center transition-all duration-300">
+                            <div class="w-14 h-14 flex items-center justify-center mb-2">
+                                <svg class="w-14 h-14" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 38C6 35 8 32 12 32H38C42 32 44 35 44 38V44H6V38Z" fill="#E32626"/>
+                                    <path d="M10 32L15 23C16 21 18 20 21 20H33C36 20 38 21 39 23L44 32H10Z" fill="#1E1C1A"/>
+                                    <circle cx="14" cy="44" r="6" fill="#1E1C1A"/>
+                                    <circle cx="14" cy="44" r="2.5" fill="white"/>
+                                    <circle cx="36" cy="44" r="6" fill="#1E1C1A"/>
+                                    <circle cx="36" cy="44" r="2.5" fill="white"/>
+                                    <rect x="46" y="10" width="6" height="28" rx="3" fill="white" stroke="#1E1C1A" stroke-width="2"/>
+                                    <circle cx="49" cy="38" r="7" fill="white" stroke="#1E1C1A" stroke-width="2"/>
+                                    <circle cx="49" cy="38" r="4.5" fill="#E32626"/>
+                                    <rect x="48" y="14" width="2" height="22" rx="1" fill="#E32626"/>
+                                    <path d="M43 8L49 14M49 8L43 14M46 7V15M42 11H50" stroke="#1E1C1A" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider group-hover:text-[#E32626] transition-colors mt-2">AC Service</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light font-body">Gas recharge &amp; filter flush</p>
+                        </div>
+
+                        <!-- Wheel Alignment -->
+                        <div class="premium-card p-6 group cursor-pointer flex flex-col items-center justify-center text-center transition-all duration-300">
+                            <div class="w-14 h-14 flex items-center justify-center mb-2">
+                                <svg class="w-14 h-14" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="32" cy="32" r="20" fill="white" stroke="#1E1C1A" stroke-width="3"/>
+                                    <circle cx="32" cy="32" r="14" fill="#1E1C1A" stroke="#1E1C1A" stroke-width="1"/>
+                                    <circle cx="32" cy="32" r="8" fill="white" stroke="#1E1C1A" stroke-width="2"/>
+                                    <line x1="32" y1="12" x2="32" y2="24" stroke="#1E1C1A" stroke-width="3"/>
+                                    <line x1="12" y1="32" x2="24" y2="32" stroke="#1E1C1A" stroke-width="3"/>
+                                    <line x1="52" y1="32" x2="40" y2="32" stroke="#1E1C1A" stroke-width="3"/>
+                                    <line x1="32" y1="52" x2="32" y2="40" stroke="#1E1C1A" stroke-width="3"/>
+                                    <path d="M4 14H60" stroke="#E32626" stroke-width="2" stroke-dasharray="4,4"/>
+                                    <path d="M4 50H60" stroke="#E32626" stroke-width="2" stroke-dasharray="4,4"/>
+                                    <path d="M14 8V20M8 14H20" stroke="#E32626" stroke-width="1.5"/>
+                                    <path d="M56 44V56M50 50H62" stroke="#E32626" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider group-hover:text-[#E32626] transition-colors mt-2">Wheel Alignment</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light font-body">3D digital calibration</p>
+                        </div>
+
+                        <!-- Denting / Painting -->
+                        <div class="premium-card p-6 group cursor-pointer flex flex-col items-center justify-center text-center transition-all duration-300">
+                            <div class="w-14 h-14 flex items-center justify-center mb-2">
+                                <svg class="w-14 h-14" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 26C14 26 16 18 28 18H44V44H20C16 44 14 40 14 40V26Z" fill="white" stroke="#1E1C1A" stroke-width="2"/>
+                                    <rect x="32" y="24" width="8" height="3" rx="1.5" fill="#1E1C1A"/>
+                                    <path d="M14 26C14 26 16 18 28 18V36C22 36 14 30 14 26Z" fill="#E32626"/>
+                                    <rect x="36" y="34" width="8" height="14" rx="2" transform="rotate(-30 36 34)" fill="#1E1C1A"/>
+                                    <path d="M38 32L34 26L42 22L44 28L38 32Z" fill="#E32626" stroke="#1E1C1A" stroke-width="1.5"/>
+                                    <ellipse cx="44" cy="18" rx="6" ry="8" fill="white" stroke="#1E1C1A" stroke-width="2"/>
+                                    <path d="M30 24C24 24 22 28 18 29" stroke="#E32626" stroke-width="2" stroke-linecap="round" stroke-dasharray="2,3"/>
+                                    <path d="M30 26C25 28 23 31 20 33" stroke="#E32626" stroke-width="2" stroke-linecap="round" stroke-dasharray="2,3"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider group-hover:text-[#E32626] transition-colors mt-2">Denting / Painting</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light font-body">Showroom paint matching</p>
+                        </div>
+
+                        <!-- Car Detailing -->
+                        <div class="premium-card p-6 group cursor-pointer flex flex-col items-center justify-center text-center transition-all duration-300">
+                            <div class="w-14 h-14 flex items-center justify-center mb-2">
+                                <svg class="w-14 h-14" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 38C6 35 8 32 12 32H44C48 32 50 35 50 38V44H6V38Z" fill="#E32626"/>
+                                    <path d="M10 32L15 23C16 21 18 20 21 20H39C42 20 44 21 45 23L50 32H10Z" fill="#1E1C1A"/>
+                                    <circle cx="14" cy="44" r="6" fill="#1E1C1A"/>
+                                    <circle cx="14" cy="44" r="2.5" fill="white"/>
+                                    <circle cx="42" cy="44" r="6" fill="#1E1C1A"/>
+                                    <circle cx="42" cy="44" r="2.5" fill="white"/>
+                                    <path d="M32 14H46L48 18H30L32 14Z" fill="#1E1C1A"/>
+                                    <ellipse cx="38" cy="19" rx="7" ry="2" fill="white" stroke="#1E1C1A" stroke-width="1.5"/>
+                                    <ellipse cx="38" cy="21" rx="8" ry="1.5" fill="#E32626"/>
+                                    <path d="M44 14C48 14 50 11 48 8" stroke="#1E1C1A" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M12 12L14 15L17 12L14 9L12 12Z" fill="#E32626"/>
+                                    <path d="M52 14L54 17L57 14L54 11L52 14Z" fill="#E32626"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider group-hover:text-[#E32626] transition-colors mt-2">Car Detailing</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light font-body">Ceramic &amp; Graphene coats</p>
+                        </div>
+
+                        <!-- Battery Check -->
+                        <div class="premium-card p-6 group cursor-pointer flex flex-col items-center justify-center text-center transition-all duration-300">
+                            <div class="w-14 h-14 flex items-center justify-center mb-2">
+                                <svg class="w-14 h-14" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="14" y="20" width="36" height="26" rx="4" fill="white" stroke="#1E1C1A" stroke-width="3"/>
+                                    <rect x="20" y="14" width="6" height="6" fill="#1E1C1A" rx="1"/>
+                                    <rect x="38" y="14" width="6" height="6" fill="#1E1C1A" rx="1"/>
+                                    <path d="M21 28H25" stroke="#1E1C1A" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M41 28H45M43 26V30" stroke="#E32626" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M33 24L27 33H33L31 40L37 31H31L33 24Z" fill="#E32626" stroke="#1E1C1A" stroke-width="1.5" stroke-linejoin="miter"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider group-hover:text-[#E32626] transition-colors mt-2">Battery Check</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light font-body">Premium Exide &amp; Amaron</p>
+                        </div>
+
+                        <!-- Suspension Repair -->
+                        <div class="premium-card p-6 group cursor-pointer flex flex-col items-center justify-center text-center transition-all duration-300">
+                            <div class="w-14 h-14 flex items-center justify-center mb-2">
+                                <svg class="w-14 h-14" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="28" y="8" width="8" height="48" rx="4" fill="white" stroke="#1E1C1A" stroke-width="2"/>
+                                    <path d="M26 16C26 16 30 14 38 16C38 16 35 19 29 19C26 19 26 21 26 21" stroke="#E32626" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M26 24C26 24 30 22 38 24C38 24 35 27 29 27C26 27 26 29 26 29" stroke="#E32626" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M26 32C26 32 30 30 38 32C38 32 35 35 29 35C26 35 26 37 26 37" stroke="#E32626" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M26 40C26 40 30 38 38 40C38 40 35 43 29 43C26 43 26 45 26 45" stroke="#E32626" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="32" cy="8" r="4" fill="#1E1C1A"/>
+                                    <circle cx="32" cy="56" r="4" fill="#1E1C1A"/>
+                                    <path d="M14 44L44 14" stroke="#1E1C1A" stroke-width="4" stroke-linecap="round"/>
+                                    <path d="M11 41C9 43 9 47 11 49C13 51 17 51 19 49" stroke="#1E1C1A" stroke-width="3" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider group-hover:text-[#E32626] transition-colors mt-2">Suspension Repair</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light font-body">Shockers &amp; link rod tuning</p>
+                        </div>
+
+                        <!-- Tyre Services -->
+                        <div class="premium-card p-6 group cursor-pointer flex flex-col items-center justify-center text-center transition-all duration-300">
+                            <div class="w-14 h-14 flex items-center justify-center mb-2">
+                                <svg class="w-14 h-14" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="36" cy="26" r="18" fill="white" stroke="#1E1C1A" stroke-width="3"/>
+                                    <circle cx="36" cy="26" r="11" fill="white" stroke="#E32626" stroke-width="2.5"/>
+                                    <circle cx="36" cy="26" r="5" fill="#1E1C1A"/>
+                                    <path d="M36 8V5M24 14L22 12M20 26H17M24 38L22 40" stroke="#1E1C1A" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M10 48C14 44 20 43 26 44L34 38C34 38 36 41 33 43L28 48H10" fill="white" stroke="#1E1C1A" stroke-width="2" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider group-hover:text-[#E32626] transition-colors mt-2">Tyre Services</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light font-body">Fitting &amp; balancing hub</p>
+                        </div>
+
+                        <!-- Eco Car Wash -->
+                        <div class="premium-card p-6 group cursor-pointer flex flex-col items-center justify-center text-center transition-all duration-300">
+                            <div class="w-14 h-14 flex items-center justify-center mb-2">
+                                <svg class="w-14 h-14" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 44C10 40 14 38 20 38H44C50 38 54 40 54 44H10Z" fill="#1E1C1A"/>
+                                    <circle cx="16" cy="26" r="4" fill="white" stroke="#E32626" stroke-width="1.5"/>
+                                    <circle cx="28" cy="20" r="3" fill="white" stroke="#E32626" stroke-width="1.5"/>
+                                    <circle cx="48" cy="22" r="5" fill="white" stroke="#E32626" stroke-width="1.5"/>
+                                    <rect x="24" y="24" width="18" height="10" rx="3" fill="#E32626" stroke="#1E1C1A" stroke-width="2"/>
+                                    <path d="M38 30L46 36C48 37.5 47 40 44 40H32" fill="white" stroke="#1E1C1A" stroke-width="2"/>
+                                    <path d="M50 10L52 13L55 10L52 7L50 10Z" fill="#E32626"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider group-hover:text-[#E32626] transition-colors mt-2">Eco Car Wash</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light font-body">High pressure vacuum clean</p>
+                        </div>
+
+                        <!-- Insurance Claims -->
+                        <div class="premium-card p-6 group cursor-pointer flex flex-col items-center justify-center text-center transition-all duration-300">
+                            <div class="w-14 h-14 flex items-center justify-center mb-2">
+                                <svg class="w-14 h-14" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M32 10C32 10 44 14 48 18C52 22 52 38 32 54C12 38 12 22 16 18C20 14 32 10 32 10Z" fill="#E32626" stroke="#1E1C1A" stroke-width="3" stroke-linejoin="round"/>
+                                    <path d="M24 32L30 38L40 26" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider group-hover:text-[#E32626] transition-colors mt-2">Insurance Claims</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light font-body">Cashless claims assistance</p>
+                        </div>
+
+                        <!-- Pickup & Drop -->
+                        <div class="premium-card p-6 group cursor-pointer flex flex-col items-center justify-center text-center transition-all duration-300">
+                            <div class="w-14 h-14 flex items-center justify-center mb-2">
+                                <svg class="w-14 h-14" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="18" y="16" width="28" height="12" rx="6" fill="white" stroke="#1E1C1A" stroke-width="2.5"/>
+                                    <circle cx="24" cy="22" r="3" fill="#E32626"/>
+                                    <path d="M46 22H52V26H50V22M46 25H48V22" stroke="#1E1C1A" stroke-width="2.5" stroke-linecap="round"/>
+                                    <path d="M12 38H28C32 38 34 40 33 42L28 48H12" fill="white" stroke="#1E1C1A" stroke-width="2" stroke-linejoin="round"/>
+                                    <path d="M14 14C14 14 8 20 14 26" stroke="#E32626" stroke-width="2.5" stroke-linecap="round"/>
+                                    <path d="M14 14L10 16M14 14V18" stroke="#E32626" stroke-width="2.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider group-hover:text-[#E32626] transition-colors mt-2">Pickup &amp; Drop</h4>
+                            <p class="text-[10px] text-muted mt-1 font-light font-body">Safe PCMC door-to-door</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- 14 Services Tile Grid -->
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4">
-                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
-                        <span class="material-symbols-outlined text-secondary text-2xl">build</span>
-                        <div class="mt-3">
-                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">General Service</h4>
-                            <p class="text-[10px] text-muted mt-1 font-light">Engine health &amp; fluid top-ups</p>
-                        </div>
-                    </div>
-                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
-                        <span class="material-symbols-outlined text-secondary text-2xl">computer</span>
-                        <div class="mt-3">
-                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Engine Diagnostics</h4>
-                            <p class="text-[10px] text-muted mt-1 font-light">Advanced OBD diagnostic scans</p>
-                        </div>
-                    </div>
-                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
-                        <span class="material-symbols-outlined text-secondary text-2xl">oil_barrel</span>
-                        <div class="mt-3">
-                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Oil Change</h4>
-                            <p class="text-[10px] text-muted mt-1 font-light">Synthetic / mineral lube change</p>
-                        </div>
-                    </div>
-                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
-                        <span class="material-symbols-outlined text-secondary text-2xl">tire_repair</span>
-                        <div class="mt-3">
-                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Brake Repair</h4>
-                            <p class="text-[10px] text-muted mt-1 font-light">Pad replacement &amp; rotor turning</p>
-                        </div>
-                    </div>
-                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
-                        <span class="material-symbols-outlined text-secondary text-2xl">ac_unit</span>
-                        <div class="mt-3">
-                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">AC Service</h4>
-                            <p class="text-[10px] text-muted mt-1 font-light">Gas recharge &amp; filter cleanse</p>
-                        </div>
-                    </div>
-                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
-                        <span class="material-symbols-outlined text-secondary text-2xl">360</span>
-                        <div class="mt-3">
-                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Wheel Alignment</h4>
-                            <p class="text-[10px] text-muted mt-1 font-light">3D digital wheel calibration</p>
-                        </div>
-                    </div>
-                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
-                        <span class="material-symbols-outlined text-secondary text-2xl">brush</span>
-                        <div class="mt-3">
-                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Denting &amp; Painting</h4>
-                            <p class="text-[10px] text-muted mt-1 font-light">Scratch removal &amp; paint matching</p>
-                        </div>
-                    </div>
-                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
-                        <span class="material-symbols-outlined text-secondary text-2xl">stars</span>
-                        <div class="mt-3">
-                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Car Detailing</h4>
-                            <p class="text-[10px] text-muted mt-1 font-light">Ceramic &amp; Graphene shield coat</p>
-                        </div>
-                    </div>
-                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
-                        <span class="material-symbols-outlined text-secondary text-2xl">battery_charging_full</span>
-                        <div class="mt-3">
-                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Battery Check</h4>
-                            <p class="text-[10px] text-muted mt-1 font-light">Exide / Amaron replacements</p>
-                        </div>
-                    </div>
-                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
-                        <span class="material-symbols-outlined text-secondary text-2xl">settings_input_component</span>
-                        <div class="mt-3">
-                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Suspension Repair</h4>
-                            <p class="text-[10px] text-muted mt-1 font-light">Shockers &amp; link rod overhaul</p>
-                        </div>
-                    </div>
-                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
-                        <span class="material-symbols-outlined text-secondary text-2xl">circle</span>
-                        <div class="mt-3">
-                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Tyre Services</h4>
-                            <p class="text-[10px] text-muted mt-1 font-light">New tyres fitting &amp; balancing</p>
-                        </div>
-                    </div>
-                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
-                        <span class="material-symbols-outlined text-secondary text-2xl">local_car_wash</span>
-                        <div class="mt-3">
-                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Eco Car Wash</h4>
-                            <p class="text-[10px] text-muted mt-1 font-light">High pressure vacuum clean</p>
-                        </div>
-                    </div>
-                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
-                        <span class="material-symbols-outlined text-secondary text-2xl">assignment</span>
-                        <div class="mt-3">
-                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Insurance Claims</h4>
-                            <p class="text-[10px] text-muted mt-1 font-light">Cashless claim guidance</p>
-                        </div>
-                    </div>
-                    <div class="premium-card p-5 group cursor-pointer flex flex-col justify-between min-h-[140px]">
-                        <span class="material-symbols-outlined text-secondary text-2xl">local_taxi</span>
-                        <div class="mt-3">
-                            <h4 class="text-slate-900 text-xs font-headline font-semibold uppercase tracking-wider">Pickup &amp; Drop</h4>
-                            <p class="text-[10px] text-muted mt-1 font-light">Safe contactless car pickup</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
 
 
+
         <!-- ═══════════════════════════════════════════════════
-             5. HOW IT WORKS — SERVICE PROCESS
+             3. HOW IT WORKS — SERVICE PROCESS
         ════════════════════════════════════════════════════ -->
-        <section id="how-it-works" class="py-12 px-6 bg-background border-t border-outline relative overflow-hidden">
+        <section id="how-it-works" class="pt-24 pb-12 px-6 bg-background border-t border-outline relative overflow-hidden scroll-mt-20">
             <!-- Glow accents -->
             <div class="absolute inset-0 pointer-events-none">
                 <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-secondary/4 rounded-full blur-[180px]"></div>
@@ -587,14 +761,17 @@
             </div>
 
             <div class="max-w-7xl mx-auto relative z-10">
-                <div class="text-center mb-16 reveal-up opacity-0">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4 text-[9px] text-secondary tracking-widest uppercase font-bold font-headline">
-                        <span class="material-symbols-outlined text-xs">route</span>SERVICE JOURNEY
+                <div class="mb-16 select-none reveal-up opacity-0">
+                    <div class="flex items-center gap-6 mb-4">
+                        <span class="text-secondary/15 text-7xl md:text-9xl font-headline font-black leading-none">02</span>
+                        <div>
+                            <div class="inline-flex items-center gap-1.5 text-[9px] text-muted tracking-widest uppercase font-bold font-headline mb-2">
+                                <span class="material-symbols-outlined text-xs text-secondary">route</span>SERVICE JOURNEY
+                            </div>
+                            <h2 class="text-4xl md:text-6xl font-headline font-black text-secondary uppercase tracking-tight">How It Works</h2>
+                        </div>
                     </div>
-                    <h2 class="text-5xl md:text-7xl font-headline font-light text-slate-900 uppercase leading-none">
-                        How It <span class="text-secondary italic">Works</span>
-                    </h2>
-                    <p class="text-muted text-sm font-light mt-4 max-w-xl mx-auto leading-relaxed">
+                    <p class="text-muted text-xs md:text-sm font-light uppercase tracking-widest leading-relaxed max-w-2xl">
                         Our clinically structured 4-step process ensures your vehicle is handled with absolute precision — start to finish.
                     </p>
                 </div>
@@ -658,6 +835,233 @@ Diagnostics</h3>
 
 
 
+
+
+        <!-- ═══════════════════════════════════════════════════
+             SECTION 06: TESTIMONIALS (AUTO SLIDER)
+        ════════════════════════════════════════════════════ -->
+        <section id="testimonials" class="pt-28 pb-20 px-6 bg-background border-t border-outline relative overflow-hidden scroll-mt-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
+                    <div class="select-none">
+                        <div class="flex items-center gap-6">
+                            <span class="text-secondary/15 text-7xl md:text-9xl font-headline font-black leading-none">03</span>
+                            <div>
+                                <div class="inline-flex items-center gap-1.5 text-[9px] text-muted tracking-widest uppercase font-bold font-headline mb-2">
+                                    <span class="material-symbols-outlined text-xs text-secondary">grade</span>CLIENT VERDICTS
+                                </div>
+                                <h2 class="text-4xl md:text-6xl font-headline font-black text-secondary uppercase tracking-tight">Client Reviews</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button id="testimonial-prev" class="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300">
+                            <span class="material-symbols-outlined text-base">west</span>
+                        </button>
+                        <button id="testimonial-next" class="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300">
+                            <span class="material-symbols-outlined text-base">east</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Testimonial Slider Container -->
+                <div class="relative overflow-hidden w-full">
+                    <div id="testimonial-track" class="flex transition-transform duration-500 ease-out gap-6" style="width: 100%;">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-slide shrink-0 w-full md:w-[calc(50%-12px)] bg-white p-8 rounded-[2rem] border border-outline shadow-sm flex flex-col justify-between min-h-[220px]">
+                            <div>
+                                <div class="flex items-center gap-2 mb-4">
+                                    <div class="flex gap-0.5 text-[#F1D249]">
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star_half</span>
+                                    </div>
+                                    <span class="bg-[#F1D249]/10 text-secondary border border-[#F1D249]/20 font-headline font-bold text-[10px] px-2 py-0.5 rounded-md leading-none">4.8</span>
+                                </div>
+                                <p class="text-secondary text-xs sm:text-sm font-light font-body leading-relaxed mb-6 italic">
+                                    "Dealership quality service at a fraction of the cost! Their engine diagnostics identified a complex sensor issue on my Audi A4 that two other garages in Pune couldn't crack."
+                                </p>
+                            </div>
+                            <div class="flex justify-between items-center border-t border-outline pt-4">
+                                <div>
+                                    <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider">Rohan Deshmukh</h4>
+                                    <p class="text-[10px] text-muted font-light mt-0.5">Audi A4 Owner · PCMC</p>
+                                </div>
+                                <span class="text-secondary/10 font-headline font-black text-5xl select-none leading-none">”</span>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-slide shrink-0 w-full md:w-[calc(50%-12px)] bg-white p-8 rounded-[2rem] border border-outline shadow-sm flex flex-col justify-between min-h-[220px]">
+                            <div>
+                                <div class="flex items-center gap-2 mb-4">
+                                    <div class="flex gap-0.5 text-[#F1D249]">
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star_half</span>
+                                    </div>
+                                    <span class="bg-[#F1D249]/10 text-secondary border border-[#F1D249]/20 font-headline font-bold text-[10px] px-2 py-0.5 rounded-md leading-none">4.9</span>
+                                </div>
+                                <p class="text-secondary text-xs sm:text-sm font-light font-body leading-relaxed mb-6 italic">
+                                    "I got a full ceramic coating for my new Harrier here. The finish is absolutely glossy and premium, just like a showroom glow. Highly professional team in Chikhali!"
+                                </p>
+                            </div>
+                            <div class="flex justify-between items-center border-t border-outline pt-4">
+                                <div>
+                                    <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider">Priya Sharma</h4>
+                                    <p class="text-[10px] text-muted font-light mt-0.5">Tata Harrier Owner · Moshi</p>
+                                </div>
+                                <span class="text-secondary/10 font-headline font-black text-5xl select-none leading-none">”</span>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-slide shrink-0 w-full md:w-[calc(50%-12px)] bg-white p-8 rounded-[2rem] border border-outline shadow-sm flex flex-col justify-between min-h-[220px]">
+                            <div>
+                                <div class="flex items-center gap-2 mb-4">
+                                    <div class="flex gap-0.5 text-[#F1D249]">
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star_half</span>
+                                    </div>
+                                    <span class="bg-[#F1D249]/10 text-secondary border border-[#F1D249]/20 font-headline font-bold text-[10px] px-2 py-0.5 rounded-md leading-none">4.5</span>
+                                </div>
+                                <p class="text-secondary text-xs sm:text-sm font-light font-body leading-relaxed mb-6 italic">
+                                    "Their door-to-door pickup and drop-off facility is incredibly convenient for a busy working professional. Regular updates on WhatsApp with images of the service kept me completely relaxed."
+                                </p>
+                            </div>
+                            <div class="flex justify-between items-center border-t border-outline pt-4">
+                                <div>
+                                    <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider">Aniket Joshi</h4>
+                                    <p class="text-[10px] text-muted font-light mt-0.5">Honda City Owner · Talawade</p>
+                                </div>
+                                <span class="text-secondary/10 font-headline font-black text-5xl select-none leading-none">”</span>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="testimonial-slide shrink-0 w-full md:w-[calc(50%-12px)] bg-white p-8 rounded-[2rem] border border-outline shadow-sm flex flex-col justify-between min-h-[220px]">
+                            <div>
+                                <div class="flex items-center gap-2 mb-4">
+                                    <div class="flex gap-0.5 text-[#F1D249]">
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star_half</span>
+                                    </div>
+                                    <span class="bg-[#F1D249]/10 text-secondary border border-[#F1D249]/20 font-headline font-bold text-[10px] px-2 py-0.5 rounded-md leading-none">4.7</span>
+                                </div>
+                                <p class="text-secondary text-xs sm:text-sm font-light font-body leading-relaxed mb-6 italic">
+                                    "Exceptional denting and painting work. My Fortuner had a severe scratch on the side door, and they matched the metallic white paint so perfectly that it looks brand new!"
+                                </p>
+                            </div>
+                            <div class="flex justify-between items-center border-t border-outline pt-4">
+                                <div>
+                                    <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider">Vikram Patil</h4>
+                                    <p class="text-[10px] text-muted font-light mt-0.5">Toyota Fortuner Owner · Nigdi</p>
+                                </div>
+                                <span class="text-secondary/10 font-headline font-black text-5xl select-none leading-none">”</span>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 5 -->
+                        <div class="testimonial-slide shrink-0 w-full md:w-[calc(50%-12px)] bg-white p-8 rounded-[2rem] border border-outline shadow-sm flex flex-col justify-between min-h-[220px]">
+                            <div>
+                                <div class="flex items-center gap-2 mb-4">
+                                    <div class="flex gap-0.5 text-[#F1D249]">
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                    </div>
+                                    <span class="bg-[#F1D249]/10 text-secondary border border-[#F1D249]/20 font-headline font-bold text-[10px] px-2 py-0.5 rounded-md leading-none">5.0</span>
+                                </div>
+                                <p class="text-secondary text-xs sm:text-sm font-light font-body leading-relaxed mb-6 italic">
+                                    "Highly recommended for premium German cars. They diagnosed and solved a suspension issue on my Mercedes-Benz E-Class with dealership tools but at highly transparent pricing."
+                                </p>
+                            </div>
+                            <div class="flex justify-between items-center border-t border-outline pt-4">
+                                <div>
+                                    <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider">Sandeep Mehta</h4>
+                                    <p class="text-[10px] text-muted font-light mt-0.5">Mercedes E-Class Owner · Pune City</p>
+                                </div>
+                                <span class="text-secondary/10 font-headline font-black text-5xl select-none leading-none">”</span>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 6 -->
+                        <div class="testimonial-slide shrink-0 w-full md:w-[calc(50%-12px)] bg-white p-8 rounded-[2rem] border border-outline shadow-sm flex flex-col justify-between min-h-[220px]">
+                            <div>
+                                <div class="flex items-center gap-2 mb-4">
+                                    <div class="flex gap-0.5 text-[#F1D249]">
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star_half</span>
+                                    </div>
+                                    <span class="bg-[#F1D249]/10 text-secondary border border-[#F1D249]/20 font-headline font-bold text-[10px] px-2 py-0.5 rounded-md leading-none">4.6</span>
+                                </div>
+                                <p class="text-secondary text-xs sm:text-sm font-light font-body leading-relaxed mb-6 italic">
+                                    "The Eco Car Wash at SVCC is incredibly detailed. They did deep under-chassis washing and vacuum cleaning. My interior feels completely sanitized and fresh."
+                                </p>
+                            </div>
+                            <div class="flex justify-between items-center border-t border-outline pt-4">
+                                <div>
+                                    <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider">Neha Kulkarni</h4>
+                                    <p class="text-[10px] text-muted font-light mt-0.5">Hyundai Creta Owner · Bhosari</p>
+                                </div>
+                                <span class="text-secondary/10 font-headline font-black text-5xl select-none leading-none">”</span>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 7 -->
+                        <div class="testimonial-slide shrink-0 w-full md:w-[calc(50%-12px)] bg-white p-8 rounded-[2rem] border border-outline shadow-sm flex flex-col justify-between min-h-[220px]">
+                            <div>
+                                <div class="flex items-center gap-2 mb-4">
+                                    <div class="flex gap-0.5 text-[#F1D249]">
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star_half</span>
+                                    </div>
+                                    <span class="bg-[#F1D249]/10 text-secondary border border-[#F1D249]/20 font-headline font-bold text-[10px] px-2 py-0.5 rounded-md leading-none">4.8</span>
+                                </div>
+                                <p class="text-secondary text-xs sm:text-sm font-light font-body leading-relaxed mb-6 italic">
+                                    "Super quick turnaround on my routine general service. Clean work area, courteous staff, and absolute value for money garage in Chikhali. Found my permanent workshop!"
+                                </p>
+                            </div>
+                            <div class="flex justify-between items-center border-t border-outline pt-4">
+                                <div>
+                                    <h4 class="text-secondary text-xs font-headline font-bold uppercase tracking-wider">Milind Tambe</h4>
+                                    <p class="text-[10px] text-muted font-light mt-0.5">Maruti Swift Owner · PCMC</p>
+                                </div>
+                                <span class="text-secondary/10 font-headline font-black text-5xl select-none leading-none">”</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Reviews Redirect Button -->
+                <div class="mt-12 flex justify-center">
+                    <a href="https://www.google.com/maps/place/Siddhivinayak+Car+Care/@18.6645435,73.8041154,16z/data=!4m10!1m2!2m1!1sSiddhivinayak+car+services+pune!3m6!1s0x3bc2b97d1c791f61:0x6fb2054fbe6380a6!8m2!3d18.6645435!4d73.8095994!15sCh9TaWRkaGl2aW5heWFrIGNhciBzZXJ2aWNlcyBwdW5lWiEiH3NpZGRoaXZpbmF5YWsgY2FyIHNlcnZpY2VzIHB1bmWSARBhdXRvX3JlcGFpcl9zaG9wmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVJpTlRkeWRGRm5EQUXgAQD6AQQIABAV!16s%2Fg%2F11k4m046mt?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-3 px-8 py-4 bg-secondary text-white hover:bg-primary hover:text-[#1E1C1A] rounded-2xl border border-outline transition-all duration-300 shadow-md font-headline text-xs font-bold uppercase tracking-widest hover:scale-105 active:scale-95">
+                        <span class="material-symbols-outlined text-base">reviews</span>
+                        View Google Maps Reviews
+                        <span class="material-symbols-outlined text-xs transition-transform group-hover:translate-x-1">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- ═══════════════════════════════════════════════════
              7. BOOKING / CONTACT FORM
         ════════════════════════════════════════════════════ -->
@@ -665,15 +1069,20 @@ Diagnostics</h3>
             <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
                 <!-- Info Column -->
                 <div class="lg:col-span-5 reveal-up opacity-0">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4 text-[9px] text-primary tracking-widest uppercase font-bold font-headline">
-                        <span class="material-symbols-outlined text-xs">send</span>SECURE APPOINTMENT
+                    <div class="mb-10 select-none">
+                        <div class="flex items-center gap-5 mb-4">
+                            <span class="text-secondary/15 text-6xl md:text-8xl font-headline font-black leading-none">04</span>
+                            <div>
+                                <div class="inline-flex items-center gap-1.5 text-[9px] text-muted tracking-widest uppercase font-bold font-headline mb-1">
+                                    <span class="material-symbols-outlined text-xs text-secondary">send</span>SECURE APPOINTMENT
+                                </div>
+                                <h2 class="text-3xl md:text-5xl font-headline font-black text-secondary uppercase tracking-tight">Book Your Service</h2>
+                            </div>
+                        </div>
+                        <p class="text-on-surface text-xs md:text-sm font-light leading-relaxed uppercase tracking-wider">
+                            Enter your contact details and select your service protocol. Our coordination desk will confirm your slot within 10 minutes.
+                        </p>
                     </div>
-                    <h2 class="text-5xl lg:text-6xl font-headline font-light text-slate-900 uppercase leading-none mb-5">
-                        Book Your <span class="text-primary italic">Service</span>
-                    </h2>
-                    <p class="text-on-surface text-sm font-light leading-relaxed mb-8">
-                        Enter your contact details and select your service protocol. Our coordination desk will confirm your slot within 10 minutes.
-                    </p>
 
                     <!-- Emergency block -->
                     <div class="bg-red-50 border border-red-200 p-6 rounded-2xl mb-8">
@@ -698,7 +1107,7 @@ Diagnostics</h3>
                 <div class="lg:col-span-7 reveal-up opacity-0">
                     <div class="bg-surface-light p-8 md:p-10 rounded-[2.5rem] border border-outline shadow-2xl">
                         <h4 class="text-xl font-headline font-light text-slate-900 uppercase mb-8">Booking Request</h4>
-                        <form id="booking-form" class="space-y-5" onsubmit="handleBooking(event)">
+                        <form id="booking-form-bottom" class="space-y-5">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                                 <div>
                                     <label class="block text-[9px] uppercase tracking-widest text-muted mb-2 font-headline">Customer Name</label>
@@ -713,25 +1122,25 @@ Diagnostics</h3>
                                 <label class="block text-[9px] uppercase tracking-widest text-muted mb-2 font-headline">Select Service Mission</label>
                                 <select id="input-service" class="form-input cursor-pointer">
                                     <option value="">General Diagnostic Servicing</option>
-                                    <option value="">Brake / Suspension Overhaul</option>
-                                    <option value="">Premium Ceramic Detailing</option>
-                                    <option value="">Denting &amp; Painting</option>
-                                    <option value="">Breakdown Assistance</option>
-                                    <option value="">AC Service</option>
-                                    <option value="">Wheel Alignment</option>
-                                    <option value="">Insurance Claim</option>
+                                    <option value="repairs">Brake / Suspension Overhaul</option>
+                                    <option value="detailing">Premium Ceramic Detailing</option>
+                                    <option value="repairs">Denting &amp; Painting</option>
+                                    <option value="repairs">Breakdown Assistance</option>
+                                    <option value="repairs">AC Service</option>
+                                    <option value="repairs">Wheel Alignment</option>
+                                    <option value="repairs">Insurance Claim</option>
                                 </select>
                             </div>
                             <div>
                                 <label class="block text-[9px] uppercase tracking-widest text-muted mb-2 font-headline">Specific Symptoms / Car Model</label>
                                 <textarea id="input-message" class="form-input h-28 resize-none" placeholder="E.g., Honda City, brake squealing sound, or dent repair inquiry"></textarea>
                             </div>
-                            <button id="submit-btn" type="submit" class="btn-precision w-full text-white py-5 rounded-2xl font-headline font-light text-base tracking-wider">
+                            <button id="submit-btn-bottom" type="submit" class="btn-precision w-full text-secondary py-5 rounded-2xl font-headline font-bold text-sm tracking-widest uppercase">
                                 TRANSMIT SERVICE BOOKING
                             </button>
                         </form>
                         <!-- Confirmation Message (hidden) -->
-                        <div id="booking-success" class="hidden mt-6 bg-green-50 border border-green-200 rounded-2xl p-6 text-center">
+                        <div id="booking-success-bottom" class="hidden mt-6 bg-green-50 border border-green-200 rounded-2xl p-6 text-center">
                             <span class="material-symbols-outlined text-green-600 text-4xl mb-3 block">check_circle</span>
                             <h4 class="text-slate-900 font-headline font-bold uppercase text-sm mb-1">Booking Request Transmitted!</h4>
                             <p class="text-muted text-xs font-light">Our team will contact you within 10 minutes to confirm your slot.</p>
@@ -744,28 +1153,52 @@ Diagnostics</h3>
         <!-- ═══════════════════════════════════════════════════
              11. LOCATION & MAP
         ════════════════════════════════════════════════════ -->
-        <section id="contact" class="py-16 bg-surface px-6 border-t border-outline relative">
+        <section id="contact" class="pt-28 pb-16 bg-surface px-6 border-t border-outline relative scroll-mt-20">
             <div class="max-w-7xl mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-                    <div class="lg:col-span-5 reveal-up opacity-0">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4 text-[9px] text-secondary tracking-widest uppercase font-bold font-headline">
-                            <span class="material-symbols-outlined text-xs">explore</span>PHYSICAL LAB
+                <!-- Section Header (Spans full width for perfect column alignments) -->
+                <div class="mb-16 select-none reveal-up opacity-0">
+                    <div class="flex items-center gap-6 mb-4">
+                        <span class="text-secondary/15 text-7xl md:text-9xl font-headline font-black leading-none">05</span>
+                        <div>
+                            <div class="inline-flex items-center gap-1.5 text-[9px] text-muted tracking-widest uppercase font-bold font-headline mb-2">
+                                <span class="material-symbols-outlined text-xs text-secondary">explore</span>PHYSICAL LAB
+                            </div>
+                            <h2 class="text-4xl md:text-6xl font-headline font-black text-secondary uppercase tracking-tight">Location & Facility</h2>
                         </div>
-                        <h2 class="text-4xl md:text-5xl font-headline font-light text-slate-900 uppercase leading-none mb-8">
-                            Location &amp; <span class="text-secondary italic">Facility</span>
-                        </h2>
-                        
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                    <div class="lg:col-span-5 reveal-up opacity-0">
                         <div class="space-y-4">
-                            <!-- Card 1: Facility Location -->
+                            <!-- Card 1: Chikhali Workshop -->
                             <div class="group flex gap-4 p-5 bg-white border border-outline rounded-2xl transition-all duration-300 hover:border-secondary hover:shadow-lg hover:shadow-secondary/5 hover:-translate-y-0.5">
                                 <div class="flex w-12 h-12 shrink-0 items-center justify-center bg-secondary/10 text-secondary rounded-xl group-hover:bg-secondary group-hover:text-white transition-all duration-300">
                                     <span class="material-symbols-outlined text-xl">location_on</span>
                                 </div>
                                 <div>
-                                    <h4 class="text-xs uppercase tracking-widest text-slate-900 font-bold mb-1 font-headline">Facility Location</h4>
-                                    <p class="text-xs text-slate-600 font-light leading-relaxed font-body">Siddhivinayaka Car Care, MQPQ+6GC Pimpri-Chinchwad, Maharashtra (Opposite Spine Petrol Pump).</p>
+                                    <h4 class="text-xs uppercase tracking-widest text-slate-900 font-bold mb-1 font-headline">Chikhali Branch (Spine Road)</h4>
+                                    <p class="text-xs text-slate-600 font-light leading-relaxed font-body mb-2">Siddhivinayaka Car Care, Chikhali, Pimpri-Chinchwad, Maharashtra (Opposite Spine Petrol Pump).</p>
+                                    <a href="https://www.google.com/maps/search/Siddhivinayak+car+services+pune/@18.6635965,73.8086934,16.72z?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] text-primary font-headline font-bold uppercase tracking-widest hover:underline">
+                                        Open in Google Maps <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+                                    </a>
                                 </div>
                             </div>
+
+                            <!-- Card 1b: Ravet Workshop -->
+                            <div class="group flex gap-4 p-5 bg-white border border-outline rounded-2xl transition-all duration-300 hover:border-secondary hover:shadow-lg hover:shadow-secondary/5 hover:-translate-y-0.5">
+                                <div class="flex w-12 h-12 shrink-0 items-center justify-center bg-secondary/10 text-secondary rounded-xl group-hover:bg-secondary group-hover:text-white transition-all duration-300">
+                                    <span class="material-symbols-outlined text-xl">location_on</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs uppercase tracking-widest text-slate-900 font-bold mb-1 font-headline">Ravet Branch (Akurdi/Ravet Area)</h4>
+                                    <p class="text-xs text-slate-600 font-light leading-relaxed font-body mb-2">Siddhivinayaka Car Care, Sector 29, Ravet, Pimpri-Chinchwad, Maharashtra (Near Faurecia Company).</p>
+                                    <a href="https://www.google.com/maps?q=18.6855741,73.7887718&z=17&hl=en" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] text-primary font-headline font-bold uppercase tracking-widest hover:underline">
+                                        Open in Google Maps <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+                                    </a>
+                                </div>
+                            </div>
+
                             <!-- Card 2: Operating Hours -->
                             <div class="group flex gap-4 p-5 bg-white border border-outline rounded-2xl transition-all duration-300 hover:border-secondary hover:shadow-lg hover:shadow-secondary/5 hover:-translate-y-0.5">
                                 <div class="flex w-12 h-12 shrink-0 items-center justify-center bg-secondary/10 text-secondary rounded-xl group-hover:bg-secondary group-hover:text-white transition-all duration-300">
@@ -776,6 +1209,7 @@ Diagnostics</h3>
                                     <p class="text-xs text-slate-600 font-light leading-relaxed font-body">Monday – Sunday: 09:00 AM – 08:00 PM</p>
                                 </div>
                             </div>
+
                             <!-- Card 3: Parking & Access -->
                             <div class="group flex gap-4 p-5 bg-white border border-outline rounded-2xl transition-all duration-300 hover:border-secondary hover:shadow-lg hover:shadow-secondary/5 hover:-translate-y-0.5">
                                 <div class="flex w-12 h-12 shrink-0 items-center justify-center bg-secondary/10 text-secondary rounded-xl group-hover:bg-secondary group-hover:text-white transition-all duration-300">
@@ -786,6 +1220,7 @@ Diagnostics</h3>
                                     <p class="text-xs text-slate-600 font-light leading-relaxed font-body">Ample visitor parking directly outside the diagnostic bays. Smooth ramp access.</p>
                                 </div>
                             </div>
+
                             <!-- Card 4: Service Coverage -->
                             <div class="group flex gap-4 p-5 bg-white border border-outline rounded-2xl transition-all duration-300 hover:border-secondary hover:shadow-lg hover:shadow-secondary/5 hover:-translate-y-0.5">
                                 <div class="flex w-12 h-12 shrink-0 items-center justify-center bg-secondary/10 text-secondary rounded-xl group-hover:bg-secondary group-hover:text-white transition-all duration-300">
@@ -799,12 +1234,31 @@ Diagnostics</h3>
                         </div>
                     </div>
 
-                    <!-- Map -->
-                    <div class="lg:col-span-7 h-[300px] md:h-[480px] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden relative border border-outline reveal-up opacity-0 shadow-2xl">
-                        <iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                            src="https://maps.google.com/maps?q=18.685574,73.788772&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                            style="border:0; filter: grayscale(10%);" width="100%"></iframe>
-                        <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/5 via-transparent to-transparent"></div>
+                    <!-- Map Column -->
+                    <div class="lg:col-span-7 flex flex-col gap-6 reveal-up opacity-0">
+                        
+                        <!-- Map 1: Chikhali Branch -->
+                        <div class="h-[270px] rounded-[2rem] overflow-hidden relative border border-outline shadow-xl group">
+                            <div class="absolute top-4 left-4 z-10 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/10 text-white text-[9px] font-headline font-bold uppercase tracking-widest select-none">
+                                Chikhali Workshop (Spine Road)
+                            </div>
+                            <iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                src="https://maps.google.com/maps?q=18.6645435,73.8095994&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                                style="border:0; filter: grayscale(10%);" width="100%"></iframe>
+                            <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                        </div>
+
+                        <!-- Map 2: Ravet Branch -->
+                        <div class="h-[270px] rounded-[2rem] overflow-hidden relative border border-outline shadow-xl group">
+                            <div class="absolute top-4 left-4 z-10 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/10 text-white text-[9px] font-headline font-bold uppercase tracking-widest select-none">
+                                Ravet Workshop (Akurdi/Ravet Area)
+                            </div>
+                            <iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                src="https://maps.google.com/maps?q=18.6855741,73.7887718&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                                style="border:0; filter: grayscale(10%);" width="100%"></iframe>
+                            <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -813,98 +1267,102 @@ Diagnostics</h3>
         <!-- ═══════════════════════════════════════════════════
              4. WORKSHOP GALLERY (Shifted Above Footer)
         ════════════════════════════════════════════════════ -->
-        <section id="gallery" class="py-12 bg-surface border-t border-outline relative overflow-hidden">
+        <section id="gallery" class="pt-24 pb-12 bg-surface border-t border-outline relative overflow-hidden scroll-mt-20">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-8 reveal-up opacity-0">
-                    <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4 text-[9px] text-secondary tracking-widest uppercase font-bold font-headline">
-                            <span class="material-symbols-outlined text-xs">photo_library</span>VISUAL EVIDENCE
+                    <div class="select-none">
+                        <div class="flex items-center gap-6">
+                            <span class="text-secondary/15 text-7xl md:text-9xl font-headline font-black leading-none">06</span>
+                            <div>
+                                <div class="inline-flex items-center gap-1.5 text-[9px] text-muted tracking-widest uppercase font-bold font-headline mb-2">
+                                    <span class="material-symbols-outlined text-xs text-secondary">photo_library</span>VISUAL EVIDENCE
+                                </div>
+                                <h2 class="text-4xl md:text-6xl font-headline font-black text-secondary uppercase tracking-tight">Workshop Gallery</h2>
+                            </div>
                         </div>
-                        <h2 class="text-5xl md:text-7xl font-headline font-light text-slate-900 uppercase leading-none">
-                            Workshop <span class="text-primary italic">Gallery</span>
-                        </h2>
                     </div>
                     <p class="text-muted text-xs md:text-sm font-light max-w-xs uppercase tracking-widest leading-relaxed">
                         Undeniable physical results from our high-precision lab in Chikhali, Pune.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 reveal-up opacity-0">
-                    <!-- Image 1: Wide -->
-                    <div class="gallery-img lg:col-span-2 aspect-video lg:aspect-[16/8]">
+                <div class="grid grid-cols-2 gap-3 md:gap-5 reveal-up opacity-0">
+                    <!-- Image 1 -->
+                    <div class="gallery-img h-[150px] sm:h-[220px] md:h-[300px] lg:h-[360px]">
                         <img src="Assests/25a537d9-fd60-4c7b-a337-bd91798571c2.jfif" alt="Brake Bay Alignment Lab Siddhivinayak Car Care" class="w-full h-full object-cover" loading="lazy">
                         <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Brake Bay Alignment</span></div>
                     </div>
                     <!-- Image 2 -->
-                    <div class="gallery-img aspect-video lg:aspect-[8/8]">
+                    <div class="gallery-img h-[150px] sm:h-[220px] md:h-[300px] lg:h-[360px]">
                         <img src="Assests/52e272cc-92c3-4fa2-9d4b-df4391d82afa.jfif" alt="Precision Chassis Repair" class="w-full h-full object-cover" loading="lazy">
                         <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Precision Chassis Repair</span></div>
                     </div>
                     <!-- Image 3 -->
-                    <div class="gallery-img aspect-video">
+                    <div class="gallery-img h-[150px] sm:h-[220px] md:h-[300px] lg:h-[360px]">
                         <img src="Assests/5954b96c-86a1-486c-a92c-9de9e0a294dd.jfif" alt="Advanced Engine Tune-up" class="w-full h-full object-cover" loading="lazy">
                         <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Advanced Engine Tune-up</span></div>
                     </div>
                     <!-- Image 4 -->
-                    <div class="gallery-img aspect-video">
+                    <div class="gallery-img h-[150px] sm:h-[220px] md:h-[300px] lg:h-[360px]">
                         <img src="Assests/62ab1b96-9f09-4ced-8486-7bc7e23343be.jfif" alt="Premium Detailing Glow" class="w-full h-full object-cover" loading="lazy">
                         <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Premium Detailing Glow</span></div>
                     </div>
                     <!-- Image 5 -->
-                    <div class="gallery-img aspect-video">
+                    <div class="gallery-img h-[150px] sm:h-[220px] md:h-[300px] lg:h-[360px]">
                         <img src="Assests/9f9e22d9-5b11-4b5e-8944-3267c5551930.jfif" alt="Suspension Diagnostics Lab" class="w-full h-full object-cover" loading="lazy">
                         <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Suspension Diagnostics Lab</span></div>
                     </div>
-                    <!-- Image 6: Wide -->
-                    <div class="gallery-img lg:col-span-2 aspect-video lg:aspect-[16/8]">
+                    <!-- Image 6 -->
+                    <div class="gallery-img h-[150px] sm:h-[220px] md:h-[300px] lg:h-[360px]">
                         <img src="Assests/Hero bg (1).jfif" alt="Premium Service Lounge" class="w-full h-full object-cover" loading="lazy">
                         <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Premium Service Lounge</span></div>
                     </div>
                     <!-- Image 7 -->
-                    <div class="gallery-img aspect-video lg:aspect-[8/8]">
+                    <div class="gallery-img h-[150px] sm:h-[220px] md:h-[300px] lg:h-[360px]">
                         <img src="Assests/Hero bg (2).jfif" alt="Clinical Diagnostics Lab" class="w-full h-full object-cover" loading="lazy">
                         <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Clinical Diagnostics Lab</span></div>
                     </div>
                     <!-- Image 8 -->
-                    <div class="gallery-img aspect-video">
+                    <div class="gallery-img h-[150px] sm:h-[220px] md:h-[300px] lg:h-[360px]">
                         <img src="Assests/Hero bg (3).jfif" alt="Motorsport Workshop" class="w-full h-full object-cover" loading="lazy">
                         <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Motorsport Workshop</span></div>
                     </div>
                     <!-- Image 9 -->
-                    <div class="gallery-img aspect-video">
+                    <div class="gallery-img h-[150px] sm:h-[220px] md:h-[300px] lg:h-[360px]">
                         <img src="Assests/WhatsApp Image 2026-03-28 at 1.29.16 PM.jpeg" alt="Under-Chassis Service" class="w-full h-full object-cover" loading="lazy">
                         <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Under-Chassis Service</span></div>
                     </div>
                     <!-- Image 10 -->
-                    <div class="gallery-img aspect-video">
+                    <div class="gallery-img h-[150px] sm:h-[220px] md:h-[300px] lg:h-[360px]">
                         <img src="Assests/WhatsApp Image 2026-03-28 at 1.29.17 PM (1).jpeg" alt="Wheel Calibration Hub" class="w-full h-full object-cover" loading="lazy">
                         <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Wheel Calibration Hub</span></div>
                     </div>
-                    <!-- Image 13: Wide -->
-                    <div class="gallery-img lg:col-span-2 aspect-video lg:aspect-[16/8]">
+                    <!-- Image 11 -->
+                    <div class="gallery-img h-[150px] sm:h-[220px] md:h-[300px] lg:h-[360px]">
                         <img src="Assests/WhatsApp Image 2026-03-28 at 1.29.18 PM (2).jpeg" alt="Brake Disc Overhaul" class="w-full h-full object-cover" loading="lazy">
                         <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Brake Disc Overhaul</span></div>
                     </div>
-                    <!-- Image 11 -->
-                    <div class="gallery-img aspect-video lg:aspect-[8/8]">
+                    <!-- Image 12 -->
+                    <div class="gallery-img h-[150px] sm:h-[220px] md:h-[300px] lg:h-[360px]">
                         <img src="Assests/WhatsApp Image 2026-03-28 at 1.29.17 PM.jpeg" alt="Towing & Recovery Assist" class="w-full h-full object-cover" loading="lazy">
                         <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Towing & Recovery Assist</span></div>
                     </div>
-                    <!-- Image 12 -->
-                    <div class="gallery-img aspect-video">
+                    <!-- Image 13 -->
+                    <div class="gallery-img h-[150px] sm:h-[220px] md:h-[300px] lg:h-[360px]">
                         <img src="Assests/WhatsApp Image 2026-03-28 at 1.29.18 PM (1).jpeg" alt="Engine Bay Calibrations" class="w-full h-full object-cover" loading="lazy">
                         <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Engine Bay Calibrations</span></div>
                     </div>
                     <!-- Image 14 -->
-                    <div class="gallery-img aspect-video">
+                    <div class="gallery-img h-[150px] sm:h-[220px] md:h-[300px] lg:h-[360px]">
                         <img src="Assests/WhatsApp Image 2026-03-28 at 1.29.18 PM.jpeg" alt="Executive Quality Check" class="w-full h-full object-cover" loading="lazy">
                         <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Executive Quality Check</span></div>
                     </div>
                     <!-- Image 15 -->
-                    <div class="gallery-img aspect-video">
+                    <div class="gallery-img h-[150px] sm:h-[220px] md:h-[300px] lg:h-[360px]">
                         <img src="Assests/WhatsApp Image 2026-03-28 at 1.29.19 PM.jpeg" alt="Eco Wash & Protection" class="w-full h-full object-cover" loading="lazy">
                         <div class="overlay"><span class="text-[9px] font-headline tracking-widest uppercase text-white font-bold">Eco Wash & Protection</span></div>
                     </div>
+                </div>
                 </div>
             </div>
         </section>
@@ -914,86 +1372,106 @@ Diagnostics</h3>
     <!-- ═══════════════════════════════════════════════════
          FOOTER
     ════════════════════════════════════════════════════ -->
-    <footer class="bg-slate-950 text-white pt-16 pb-8 px-6 border-t border-slate-900">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 text-center md:text-left">
-            <!-- Column 1: SVCC Brand Identity & Socials -->
-            <div class="flex flex-col justify-between h-full items-center md:items-start">
+    <!-- ═══════════════════════════════════════════════════
+         FOOTER (MOCKUP LUXURY DARK STYLE)
+    ════════════════════════════════════════════════════ -->
+    <footer class="bg-background text-secondary pt-0 pb-12 border-t border-outline relative">
+        <!-- ── GOLD GRID WAVY CONTAINER (Automotive Grid) ── -->
+        <div class="relative w-full overflow-hidden bg-primary py-24 mb-16 select-none">
+            <!-- Wavy top border SVG (matches background color #F5F4F0) -->
+            <div class="absolute top-0 left-0 w-full overflow-hidden leading-none z-10">
+                <svg class="relative block w-full h-[30px]" viewBox="0 0 1200 120" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0,0 C150,90 350,90 500,0 C650,90 850,90 1000,0 C1150,90 1300,90 1450,0 L1450,120 L0,120 Z" fill="#F5F4F0"/>
+                </svg>
+            </div>
+
+            <!-- Tiled Grid Background -->
+            <div class="absolute inset-0 z-0 opacity-15" style="background-image: linear-gradient(to right, #1E1C1A 1.5px, transparent 1.5px), linear-gradient(to bottom, #1E1C1A 1.5px, transparent 1.5px); background-size: 48px 48px;"></div>
+
+            <!-- Content inside Gold Grid -->
+            <div class="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-8 gap-8">
+                
+                <!-- Left Slanted Ticket Sticker -->
+                <div class="hidden lg:block transform -rotate-12 bg-[#25D366] text-[#1E1C1A] border-2 border-[#1E1C1A] font-headline font-black uppercase text-[10px] tracking-[0.25em] px-5 py-2.5 shadow-[4px_4px_0px_#1E1C1A] rounded-md hover:scale-105 transition-transform duration-300">
+                    ★ 100% TRUSTED ★
+                </div>
+
+                <!-- Central Book a Slot Pill Button -->
+                <div class="flex-1 flex justify-center">
+                    <a href="#booking" class="relative group bg-[#1E1C1A] text-white font-headline text-xs sm:text-lg md:text-2xl font-black uppercase tracking-[0.2em] py-4 px-10 sm:py-6 sm:px-16 rounded-full border-2 sm:border-4 border-[#1E1C1A] shadow-[4px_4px_0px_rgba(30,28,26,0.35)] sm:shadow-[8px_8px_0px_rgba(30,28,26,0.35)] transition-all duration-300 hover:bg-[#F5F4F0] hover:text-[#1E1C1A] hover:scale-105 hover:shadow-[6px_6px_0px_rgba(30,28,26,0.5)] sm:hover:shadow-[12px_12px_0px_rgba(30,28,26,0.5)] active:scale-95 text-center flex items-center gap-3 sm:gap-4 whitespace-nowrap">
+                        <span class="material-symbols-outlined text-base sm:text-xl md:text-3xl animate-pulse text-primary group-hover:text-[#1E1C1A]">event_available</span>
+                        Book a Slot
+                    </a>
+                </div>
+
+                <!-- Right Serrated Star Sticker -->
+                <div class="hidden lg:flex items-center justify-center w-24 h-24 bg-[#0066FF] border-2 border-[#1E1C1A] text-white font-headline font-black text-center uppercase tracking-widest text-[11px] shadow-[4px_4px_0px_#1E1C1A] hover:rotate-12 transition-transform duration-300" style="clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);">
+                    <div class="transform -rotate-12 p-1 font-black">10% OFF!</div>
+                </div>
+
+            </div>
+
+            <!-- Wavy bottom border SVG -->
+            <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10 transform rotate-180">
+                <svg class="relative block w-full h-[30px]" viewBox="0 0 1200 120" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0,0 C150,90 350,90 500,0 C650,90 850,90 1000,0 C1150,90 1300,90 1450,0 L1450,120 L0,120 Z" fill="#F5F4F0"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- ── BOTTOM INFORMATION BLOCK ── -->
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-12 mb-12 px-6 md:px-12">
+            
+            <!-- Left Brand Segment -->
+            <div class="flex flex-col gap-6 max-w-md">
                 <div>
-                    <span class="text-3xl font-headline font-black text-white uppercase tracking-tighter mb-4 block">
-                        SV<span class="text-primary">CC.</span>
+                    <!-- Huge Brand Title -->
+                    <span class="text-4xl md:text-5xl font-headline font-black text-secondary uppercase tracking-[0.1em] mb-2 block">
+                        SV<span class="text-muted font-light">CC.</span>
                     </span>
-                    <p class="text-slate-400 text-xs font-light leading-relaxed max-w-sm mb-6">
-                        Redefining automotive care through clinical precision and high-performance multibrand engineering. Dealership-quality repairs without the markup.
+                    <p class="text-muted text-xs font-light font-body leading-relaxed max-w-sm">
+                        Redefining automotive care through clinical precision and high-performance multibrand engineering. PCMC's premium multibrand lab.
                     </p>
-                </div>
-                <div class="flex gap-5 text-[10px] font-headline font-bold tracking-[0.2em] text-slate-500 uppercase justify-center md:justify-start mb-6 md:mb-0">
-                    <a class="hover:text-primary transition-colors" href="#">Instagram</a>
-                    <a class="hover:text-primary transition-colors" href="#">Facebook</a>
-                    <a class="hover:text-primary transition-colors" href="#">Google Rating</a>
                 </div>
             </div>
 
-            <!-- Column 2: Quick Links -->
-            <div class="md:pl-12">
-                <h5 class="font-headline font-bold text-slate-200 uppercase tracking-widest text-xs mb-4">Service Labs</h5>
-                <ul class="space-y-2 text-xs font-light text-slate-400">
-                    <li><a href="#services" class="hover:text-primary transition-colors">AC &amp; Coolant Service</a></li>
-                    <li><a href="#services" class="hover:text-primary transition-colors">3D Wheel Alignment</a></li>
-                    <li><a href="#services" class="hover:text-primary transition-colors">Cashless Claims</a></li>
-                    <li><a href="#services" class="hover:text-primary transition-colors">Denting &amp; Painting</a></li>
-                    <li><a href="#services" class="hover:text-primary transition-colors">Ceramic Coating &amp; Detailing</a></li>
-                    <li><a href="#services" class="hover:text-primary transition-colors">Engine OBD Diagnostics</a></li>
-                </ul>
+            <!-- Right Segment with brand description & social -->
+            <div class="flex flex-col gap-6 lg:max-w-xl text-left lg:text-right lg:items-end">
+                <p class="text-secondary text-sm md:text-base font-body font-light leading-relaxed max-w-lg">
+                    From showroom-grade denting &amp; painting to advanced OBD diagnostics and premium eco-cleaning bays. There is a clinical solution for every car.
+                </p>
+                
+                <!-- Social links & Contacts -->
+                <div class="flex flex-wrap items-center gap-6 mt-4 justify-start lg:justify-end text-xs font-headline font-bold uppercase tracking-widest text-secondary">
+                    <a href="tel:+919970745411" class="hover:text-muted transition-colors flex items-center gap-1">
+                        <span class="material-symbols-outlined text-base">phone</span>+91 99707 45411
+                    </a>
+                    <a href="https://wa.me/919970745411" target="_blank" class="hover:text-muted transition-colors flex items-center gap-1">
+                        <span class="material-symbols-outlined text-base">chat</span>WhatsApp
+                    </a>
+                    <a href="#" class="hover:text-muted transition-colors">Instagram</a>
+                    <a href="#" class="hover:text-muted transition-colors">Facebook</a>
+                </div>
             </div>
 
-            <!-- Column 3: Facility & Support -->
-            <div class="flex flex-col justify-between h-full items-center md:items-start mt-6 md:mt-0">
-                <div>
-                    <h5 class="font-headline font-bold text-slate-200 uppercase tracking-widest text-xs mb-4">Pune Facility</h5>
-                    <p class="text-slate-400 text-xs mb-4 font-light leading-relaxed max-w-xs mx-auto md:mx-0">
-                        Spine Road, Talawade, Chikhali, Pimpri-Chinchwad, Pune - 411062
-                    </p>
-                    <div class="space-y-2 text-xs font-light flex flex-col items-center md:items-start">
-                        <a href="tel:+919970745411" class="text-white hover:text-primary transition-colors flex items-center gap-2 font-semibold justify-center md:justify-start">
-                            <span class="material-symbols-outlined text-sm text-secondary">phone</span>+91 99707 45411
-                        </a>
-                        <a href="https://wa.me/919970745411" target="_blank" class="text-[#25D366] hover:text-green-400 transition-colors flex items-center gap-2 font-semibold justify-center md:justify-start">
-                            <span class="material-symbols-outlined text-sm">chat</span>WhatsApp Chat
-                        </a>
-                    </div>
-                </div>
-                <!-- Towing Assistance and Hours -->
-                <div class="mt-6 space-y-3 flex flex-col items-center md:items-start w-full">
-                    <div class="inline-flex items-center gap-2 bg-red-950/40 border border-red-900/30 p-2 px-3 rounded-full justify-center mx-auto md:mx-0">
-                        <span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
-                        <span class="text-[9px] text-slate-300 font-headline uppercase tracking-wider">Towing Help: <a href="tel:+919970745411" class="text-primary font-bold hover:underline font-body">Call Hotline</a></span>
-                    </div>
-                    <p class="text-[9px] text-slate-500 font-headline uppercase tracking-wider">
-                        Operating: Mon–Sun 9:00 AM – 8:00 PM
-                    </p>
-                </div>
-            </div>
         </div>
-        
-        <div class="max-w-7xl mx-auto pt-7 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] text-slate-500 font-headline uppercase tracking-widest font-light text-center md:text-left">
+
+        <!-- Footer Copyright & Legal -->
+        <div class="max-w-7xl mx-auto pt-8 border-t border-outline flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] text-muted font-headline uppercase tracking-widest font-bold px-6 md:px-12">
             <p>© 2026 Siddhivinayak Car Care. PCMC, Pune. All rights reserved.</p>
-            <div class="flex gap-6 justify-center md:justify-start">
-                <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
-                <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+            <div class="flex gap-6">
+                <a class="hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+                <a class="hover:text-secondary transition-colors" href="#">Terms of Service</a>
             </div>
         </div>
 
-        <!-- SEO Keywords (hidden) -->
-        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-wrap gap-3 justify-center mt-6 border-t border-slate-900">
-            <span class="text-[8px] font-headline uppercase tracking-widest text-slate-700">Car Service in Chikhali</span>
-            <span class="text-[8px] text-slate-800">•</span>
-            <span class="text-[8px] font-headline uppercase tracking-widest text-slate-700">Garage in Talawade</span>
-            <span class="text-[8px] text-slate-800">•</span>
-            <span class="text-[8px] font-headline uppercase tracking-widest text-slate-700">Car Repair Pune</span>
-            <span class="text-[8px] text-slate-800">•</span>
-            <span class="text-[8px] font-headline uppercase tracking-widest text-slate-700">Multibrand Workshop PCMC</span>
-            <span class="text-[8px] text-slate-800">•</span>
-            <span class="text-[8px] font-headline uppercase tracking-widest text-slate-700">Ceramic Coating Pune</span>
+        <!-- Hidden SEO Segment -->
+        <div class="hidden">
+            <span>Car Service in Chikhali</span>
+            <span>Garage in Talawade</span>
+            <span>Car Repair Pune</span>
+            <span>Multibrand Workshop PCMC</span>
+            <span>Ceramic Coating Pune</span>
         </div>
     </footer>
 
@@ -1109,27 +1587,98 @@ Diagnostics</h3>
 
         /* ── Booking Form ── */
         function handleBooking(e) {
-            e.preventDefault();
+            if (e) e.preventDefault();
             const form    = document.getElementById('booking-form');
             const success = document.getElementById('booking-success');
             const btn     = document.getElementById('submit-btn');
-            btn.textContent = 'TRANSMITTING...';
+            btn.textContent = 'RESERVING...';
             btn.disabled = true;
             setTimeout(() => {
-                form.style.opacity = '0.3';
-                form.style.pointerEvents = 'none';
-                success.classList.remove('hidden');
-                btn.textContent = 'TRANSMITTED ✓';
+                if (form) {
+                    form.style.opacity = '0.3';
+                    form.style.pointerEvents = 'none';
+                }
+                if (success) success.classList.remove('hidden');
+                btn.textContent = 'RESERVED ✓';
             }, 1000);
         }
+
+        // Attach event listener directly
+        document.getElementById('booking-form')?.addEventListener('submit', handleBooking);
+
+        /* ── Bottom Booking Form ── */
+        function handleBookingBottom(e) {
+            if (e) e.preventDefault();
+            const form    = document.getElementById('booking-form-bottom');
+            const success = document.getElementById('booking-success-bottom');
+            const btn     = document.getElementById('submit-btn-bottom');
+            if (btn) {
+                btn.textContent = 'RESERVING...';
+                btn.disabled = true;
+            }
+            setTimeout(() => {
+                if (form) {
+                    form.style.opacity = '0.3';
+                    form.style.pointerEvents = 'none';
+                }
+                if (success) success.classList.remove('hidden');
+                if (btn) btn.textContent = 'RESERVED ✓';
+            }, 1000);
+        }
+        document.getElementById('booking-form-bottom')?.addEventListener('submit', handleBookingBottom);
+
+        /* ── Hero Form Tabs Interaction ── */
+        document.querySelectorAll('.form-tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.form-tab-btn').forEach(b => {
+                    b.className = 'form-tab-btn text-muted text-[9px] font-headline font-bold py-2 rounded-full text-center hover:text-secondary transition-all duration-300';
+                });
+                btn.className = 'form-tab-btn bg-primary text-secondary text-[9px] font-headline font-bold py-2 rounded-full text-center transition-all duration-300';
+                
+                const type = btn.dataset.type;
+                const selectEl = document.querySelector('#booking-form select');
+                if (selectEl) {
+                    if (type === 'diagnostics') {
+                        selectEl.value = 'diagnostics';
+                    } else if (type === 'repairs') {
+                        selectEl.value = 'repairs';
+                    } else if (type === 'detailing') {
+                        selectEl.value = 'detailing';
+                    }
+                }
+            });
+        });
+
+        /* ── Service Packages Tab Filtering ── */
+        document.querySelectorAll('.package-tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.package-tab-btn').forEach(b => {
+                    b.className = 'package-tab-btn px-6 py-2.5 rounded-full bg-transparent text-muted hover:text-secondary text-[10px] font-headline font-bold uppercase tracking-wider transition-all duration-300';
+                });
+                btn.className = 'package-tab-btn px-6 py-2.5 rounded-full bg-secondary text-white text-[10px] font-headline font-bold uppercase tracking-wider transition-all duration-300';
+                
+                const category = btn.dataset.category;
+                document.querySelectorAll('.package-card-item').forEach(card => {
+                    if (category === 'all' || card.dataset.cat === category) {
+                        gsap.to(card, { opacity: 1, scale: 1, duration: 0.4, display: 'flex', ease: 'power2.out' });
+                    } else {
+                        gsap.to(card, { opacity: 0, scale: 0.95, duration: 0.3, display: 'none', ease: 'power2.in' });
+                    }
+                });
+            });
+        });
         /* ── Hero Image Slider ── */
         (function() {
             const slidesEl = document.getElementById('heroSlides');
+            if (!slidesEl) return; // Exit cleanly if the slider elements are not in the DOM
+            
             const dots = document.querySelectorAll('.slider-dot');
             const total = dots.length;
+            if (total === 0) return;
+            
             let current = 0;
             let autoTimer;
-
+ 
             function goTo(index) {
                 current = (index + total) % total;
                 slidesEl.style.transform = `translateX(-${current * 100}%)`;
@@ -1141,18 +1690,26 @@ Diagnostics</h3>
                     d.classList.toggle('w-2', i !== current);
                 });
             }
-
+ 
             function startAuto() {
                 autoTimer = setInterval(() => goTo(current + 1), 4000);
             }
             function stopAuto() { clearInterval(autoTimer); }
-
-            document.getElementById('sliderNext').addEventListener('click', () => { stopAuto(); goTo(current + 1); startAuto(); });
-            document.getElementById('sliderPrev').addEventListener('click', () => { stopAuto(); goTo(current - 1); startAuto(); });
+ 
+            const nextBtn = document.getElementById('sliderNext');
+            const prevBtn = document.getElementById('sliderPrev');
+            
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => { stopAuto(); goTo(current + 1); startAuto(); });
+            }
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => { stopAuto(); goTo(current - 1); startAuto(); });
+            }
+            
             dots.forEach((dot) => {
                 dot.addEventListener('click', () => { stopAuto(); goTo(parseInt(dot.dataset.index)); startAuto(); });
             });
-
+ 
             // Touch/swipe support
             let touchStartX = 0;
             slidesEl.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
@@ -1160,29 +1717,29 @@ Diagnostics</h3>
                 const diff = touchStartX - e.changedTouches[0].clientX;
                 if (Math.abs(diff) > 40) { stopAuto(); goTo(diff > 0 ? current + 1 : current - 1); startAuto(); }
             });
-
+ 
             goTo(0);
             startAuto();
         })();
 
-        /* ── Mobile Gallery Dynamic Grid Collage ── */
+        /* ── Mobile Gallery Dynamic Grid Collage (Alternating 1 and 2 per row) ── */
         (function() {
             if (window.innerWidth < 768) {
                 const galleryGrid = document.querySelector('#gallery .grid');
                 if (galleryGrid) {
                     const items = Array.from(galleryGrid.children);
                     if (items.length > 0) {
-                        // Shuffle all items
+                        // Shuffle all items dynamically
                         const shuffled = items.sort(() => 0.5 - Math.random());
                         
                         // Clear existing children
                         galleryGrid.innerHTML = '';
                         
-                        // Set mobile grid container with 6 columns for clean 2, 3, 1 row distribution
-                        galleryGrid.className = "grid grid-cols-6 gap-3 py-2 w-full";
+                        // Set mobile grid container with 2 columns
+                        galleryGrid.className = "grid grid-cols-2 gap-3 py-2 w-full";
                         
                         let tempItems = [...shuffled];
-                        const pattern = [2, 3, 1];
+                        const pattern = [1, 2]; // 1 full-width, then 2 half-width
                         let patternIndex = 0;
                         
                         while (tempItems.length > 0) {
@@ -1193,21 +1750,15 @@ Diagnostics</h3>
                             
                             const rowItems = tempItems.splice(0, count);
                             
-                            if (count === 3) {
+                            if (count === 1) {
                                 rowItems.forEach(el => {
-                                    el.className = "gallery-img col-span-2 aspect-video";
-                                    el.style.display = ''; // Reset display style
+                                    el.className = "gallery-img col-span-2 h-[200px]";
+                                    el.style.display = '';
                                     galleryGrid.appendChild(el);
                                 });
                             } else if (count === 2) {
                                 rowItems.forEach(el => {
-                                    el.className = "gallery-img col-span-3 aspect-video";
-                                    el.style.display = '';
-                                    galleryGrid.appendChild(el);
-                                });
-                            } else if (count === 1) {
-                                rowItems.forEach(el => {
-                                    el.className = "gallery-img col-span-6 aspect-video";
+                                    el.className = "gallery-img col-span-1 h-[140px]";
                                     el.style.display = '';
                                     galleryGrid.appendChild(el);
                                 });
@@ -1273,6 +1824,123 @@ Diagnostics</h3>
                     closeLightbox();
                 }
             });
+        })();
+
+        /* ── Testimonials Endless Auto Slider ── */
+        (function() {
+            const track = document.getElementById('testimonial-track');
+            const prevBtn = document.getElementById('testimonial-prev');
+            const nextBtn = document.getElementById('testimonial-next');
+            if (!track || !prevBtn || !nextBtn) return;
+
+            const slides = Array.from(track.children);
+            const totalSlides = slides.length;
+            let currentIndex = 0;
+            let autoTimer;
+
+            function getVisibleCount() {
+                return window.innerWidth >= 768 ? 2 : 1;
+            }
+
+            function updateSlider(animate = true) {
+                const visibleCount = getVisibleCount();
+                const maxIndex = totalSlides - visibleCount;
+                
+                if (currentIndex > maxIndex) {
+                    currentIndex = 0; // Wrap around to start
+                } else if (currentIndex < 0) {
+                    currentIndex = maxIndex; // Wrap to end
+                }
+
+                const gap = 24; // gap-6 is 24px
+                const containerWidth = track.parentElement.getBoundingClientRect().width;
+                const slideWidth = visibleCount === 2 ? (containerWidth - gap) / 2 : containerWidth;
+                
+                slides.forEach(slide => {
+                    slide.style.width = `${slideWidth}px`;
+                });
+
+                const translateValue = currentIndex * (slideWidth + gap);
+                
+                track.style.transition = animate ? 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)' : 'none';
+                track.style.transform = `translateX(-${translateValue}px)`;
+            }
+
+            function nextSlide() {
+                currentIndex++;
+                updateSlider();
+            }
+
+            function prevSlide() {
+                currentIndex--;
+                updateSlider();
+            }
+
+            prevBtn.addEventListener('click', () => {
+                clearInterval(autoTimer);
+                prevSlide();
+                startAuto();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                clearInterval(autoTimer);
+                nextSlide();
+                startAuto();
+            });
+
+            function startAuto() {
+                autoTimer = setInterval(nextSlide, 4500);
+            }
+
+            window.addEventListener('resize', () => {
+                updateSlider(false);
+            });
+
+            // Touch Swipe support
+            let startX = 0;
+            track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+            track.addEventListener('touchend', e => {
+                const diff = startX - e.changedTouches[0].clientX;
+                if (Math.abs(diff) > 50) {
+                    clearInterval(autoTimer);
+                    if (diff > 0) nextSlide();
+                    else prevSlide();
+                    startAuto();
+                }
+            });
+
+            // Initial build
+            setTimeout(() => {
+                updateSlider(false);
+                startAuto();
+            }, 100);
+        })();
+
+        /* ── Hero Background Auto Slideshow ── */
+        (function() {
+            const container = document.getElementById('hero-slider-container');
+            if (!container) return;
+            const slides = container.querySelectorAll('.hero-slide');
+            if (slides.length <= 1) return;
+
+            let currentSlideIndex = 0;
+            const slideInterval = 5000; // Change background slide every 5 seconds
+
+            function nextBgSlide() {
+                // Fade out current slide
+                slides[currentSlideIndex].classList.remove('opacity-100');
+                slides[currentSlideIndex].classList.add('opacity-0');
+
+                // Move to next slide index
+                currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+
+                // Fade in next slide
+                slides[currentSlideIndex].classList.remove('opacity-0');
+                slides[currentSlideIndex].classList.add('opacity-100');
+            }
+
+            // Start auto slider
+            setInterval(nextBgSlide, slideInterval);
         })();
     </script>
 
